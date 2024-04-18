@@ -5,14 +5,7 @@ main()
 {
     self.animtree = "";
     self.additionalassets = "";
-    if ( level.script == "boneyard" )
-	{
-		self.team = "allies";	
-	}
-	else
-	{
-		self.team = "axis";
-	}
+	self.team = "axis";
     self.type = "human";
     self.subclass = "regular";
     self.accuracy = 0.2;

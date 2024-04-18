@@ -22,7 +22,7 @@ main()
     }
 
     self.weapon = "at4";
-    character\character_us_army_assault_lmg::main();
+    character\character_shadow_co_lmg::main();
 }
 
 spawner()
@@ -32,7 +32,7 @@ spawner()
 
 precache()
 {
-    character\character_us_army_assault_lmg::precache();
+    character\character_shadow_co_lmg::precache();
     precacheitem( "at4" );
     precacheitem( "masada" );
     precacheitem( "glock" );
