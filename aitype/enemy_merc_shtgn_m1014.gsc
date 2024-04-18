@@ -23,11 +23,13 @@ main()
 
     self.weapon = "m1014";
 
-    if(level.script == "estate"){
-        character\character_tf141_arctic_rnd::main();
-    }
-    else{
+    if(level.script == "estate")
+    {
         character\character_merc_rnd::main();
+    }
+    else
+    {
+        character\character_tf141_arctic_rnd::main();
     }
 }
 

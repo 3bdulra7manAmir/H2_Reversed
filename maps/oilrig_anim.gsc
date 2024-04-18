@@ -1,5 +1,5 @@
 // H2 GSC SOURCE
-// Decompiled by https://github.com/xensik/gsc-tool
+// Dumped by https://github.com/xensik/gsc-tool
 
 main()
 {
@@ -30,9 +30,6 @@ _id_CE53()
 
 audio_anim()
 {
-    maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    level.scr_model["worldbody"] = "viewbody_arctic";
     wait 0.1;
     maps\_anim::addonstart_animsound( "player_rig", "underwater_player_start", "scn_oilrig_underwater_plr_start" );
     maps\_anim::addonstart_animsound( "worldbody", "c4bodywall", "scn_oilrig_c4_bodywall_plr" );
@@ -46,13 +43,11 @@ audio_anim()
     maps\_anim::addonstart_animsound( "generic", "oilrig_rappel_2_crouch", "scn_oilrig_npc_rappel_deck2" );
     maps\_anim::addonstart_animsound( "soap", "escape_departure", "scn_oilrig_plr_grabbing_wpn" );
 }
+
 #using_animtree("generic_human");
 
 _id_C544()
 {
-    maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    level.scr_model["worldbody"] = "viewbody_arctic";
     level.scr_anim["sdv01_pilot"]["sdv_ride_in"] = %oilrig_sub_a_disembark_1;
     level.scr_anim["sdv01_copilot"]["sdv_ride_in"] = %oilrig_sub_a_disembark_2;
     level.scr_anim["sdv01_swimmer1"]["sdv_ride_in"] = %oilrig_sub_a_disembark_4;
@@ -109,9 +104,6 @@ _id_C544()
 
 anims()
 {
-    maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    level.scr_model["worldbody"] = "viewbody_arctic";
     maps\_props::add_smoking_notetracks( "generic" );
     maps\_props::add_smoking_notetracks( "hostile_stealthkill_player" );
     level.scr_anim["generic"]["smoking_reach"] = %parabolic_leaning_guy_smoking_idle;
@@ -126,7 +118,7 @@ anims()
     level.scr_anim["generic"]["bored_cell_loop"][0] = %patrol_bored_idle_cellphone;
     level.scr_anim["generic"]["oilrig_balcony_smoke_idle"][0] = %h2_oilrig_smoker_idle;
     level.scr_anim["generic"]["railing_death"] = %h2_oilrig_smoker_death;
-    maps\_anim::addnotetrack_customfunction( "generic", "detach_hat", ::helmetpop_wrapper, "railing_death", ( 0.0, 0.0, 0.0 ) );
+    maps\_anim::addnotetrack_customfunction( "generic", "detach_hat", ::helmetpop_wrapper, "railing_death", ( 0, 0, 0 ) );
     maps\_anim::addnotetrack_customfunction( "generic", "detach cig", maps\_props::detach_cig );
     level.scr_anim["generic"]["pronehide_dive"] = %hunted_dive_2_pronehide_v1;
     level.scr_anim["generic"]["pronehide_idle"][0] = %hunted_pronehide_idle_v1;
@@ -478,13 +470,11 @@ dialogue()
     level.scr_sound["oilrig_merc_chatter_19"] = "oilrig_mrc3_takepoint";
     level.scr_sound["oilrig_merc_chatter_20"] = "oilrig_mrc3_watchcorners";
 }
+
 #using_animtree("player");
 
 player_anims()
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     level.scr_animtree["worldbody"] = #animtree;
     level.scr_model["worldbody"] = "viewbody_tf141_arctic";
     level.scr_anim["worldbody"]["smoker_takedown"] = %h2_oilrig_smoker_takedown_player;
@@ -511,9 +501,6 @@ player_anims()
 
 _id_BC3B( var_0 )
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     level.player._id_C147.origin = var_0 gettagorigin( "tag_weapon_left" );
     level.player._id_C147.angles = var_0 gettagangles( "tag_weapon_left" );
     level.player._id_C147.oldorigin = level.player._id_C147.origin;
@@ -521,13 +508,11 @@ _id_BC3B( var_0 )
     var_0 detach( "weapon_c4", "tag_weapon_left" );
     level.player._id_C147 show();
 }
+
 #using_animtree("vehicles");
 
 _id_A850()
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     level.scr_anim["sdv_01"]["intro_sequence"] = %oilrig_sdv_1;
     level.scr_anim["sdv_02"]["intro_sequence"] = %oilrig_sdv_2;
     level.scr_animtree["submarine_01"] = #animtree;
@@ -537,9 +522,6 @@ _id_A850()
 
 _id_B5B5()
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     level.scr_anim["blackhawk"]["idle"][0] = %blackout_bh_evac_heli_idle;
     level.scr_anim["blackhawk"]["landing"] = %blackout_bh_evac_heli_land;
     level.scr_anim["blackhawk"]["take_off"] = %blackout_bh_evac_heli_takeoff;
@@ -549,19 +531,14 @@ _id_B5B5()
 
 _id_9D7F()
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     level.scr_animtree["attack_littlebird"] = #animtree;
     level.scr_anim["attack_littlebird"]["front_react"] = %h2_littlebird_hit_front_react;
 }
+
 #using_animtree("generic_human");
 
 _id_BB5C()
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     level.scr_anim["generic"]["oilrig_seal_surface_fins_off"] = %oilrig_seal_surface_fins_off;
     level.scr_anim["generic"]["oilrig_seal_surface_mask_off"] = %oilrig_seal_surface_mask_off;
     level.scr_anim["generic"]["oilrig_seal_surface_rebreather_off_guy1"] = %h2_oilrig_seal_surface_rebreather_off_guy1;
@@ -570,24 +547,19 @@ _id_BB5C()
 
 _id_D2C8()
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     level.scr_anim["generic"]["smoker_takedown"] = %h2_oilrig_smoker_takedown_npc;
-    maps\_anim::addnotetrack_customfunction( "generic", "detach_hat", ::helmetpop_wrapper, "smoker_takedown", ( 0.0, 0.0, 0.0 ) );
+    maps\_anim::addnotetrack_customfunction( "generic", "detach_hat", ::helmetpop_wrapper, "smoker_takedown", ( 0, 0, 0 ) );
 }
 
 helmetpop_wrapper( var_0, var_1 )
 {
     var_0 animscripts\death::helmetpop( var_1 );
 }
+
 #using_animtree("script_model");
 
 _id_C902()
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     level.scr_animtree["fins_off_oilrig_seal_surface_fins_off"] = #animtree;
     level.scr_anim["fins_off_oilrig_seal_surface_fins_off"]["oilrig_seal_surface_fins_off_prop"] = %oilrig_seal_surface_fins_off_prop;
     level.scr_model["fins_off_oilrig_seal_surface_fins_off"] = "prop_seal_udt_flippers";
@@ -658,9 +630,6 @@ weapon_anims()
 
 script_model()
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     level.scr_animtree["door"] = #animtree;
     level.scr_anim["door"]["doorOpen1"] = %h2_room2a_takedown_door;
     level.scr_anim["door"]["doorOpen2"] = %h2_room2b_takedown_door;
@@ -668,9 +637,6 @@ script_model()
 
 opendoor( var_0, var_1 )
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     var_2 = getent( "door_deck1_animated", "targetname" );
     var_2 thread maps\_utility::play_sound_on_entity( "scn_oilrig_open_deck1_door" );
     var_2 maps\_anim::anim_single_solo( var_2, var_1 );
@@ -678,9 +644,6 @@ opendoor( var_0, var_1 )
 
 animated_palette()
 {
-    //maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    //level.scr_model["player_rig"] = "tf141_arctic_player_vh"; //here
-    //level.scr_model["worldbody"] = "viewbody_arctic";
     level.scr_animtree["h2_suspended_palette"] = #animtree;
     level.scr_model["h2_suspended_palette"] = "oilrig_suspended_palette_animated";
     level.scr_anim["h2_suspended_palette"]["idle"][0] = %h2_suspended_palette_idle;

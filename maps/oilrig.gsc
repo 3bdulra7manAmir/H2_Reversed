@@ -1,5 +1,5 @@
 // H2 GSC SOURCE
-// Decompiled by https://github.com/xensik/gsc-tool
+// Dumped by https://github.com/xensik/gsc-tool
 
 main()
 {
@@ -34,7 +34,6 @@ pre_load()
     setdvar( "use_node_script_flag_wait_in_color_system", 1 );
     setsaveddvar( "ai_force_combat_close", 1 );
     setsaveddvar( "ai_stairsPerfectFriendlyAimInMeleeRange", 1 );
-    level.slowmo_viewhands = "spetsnaz_arctic_vh";
     level._id_B522 = 3;
     level.dronecallbackthread = ::_id_B6A2;
     setdynamicdvar( "oilrig_debug", "0" );
@@ -91,10 +90,8 @@ pre_load()
     level._id_C830[11] = "weapon_dragunov_clip";
     level._id_C830[12] = "weapon_saw_clip";
     level._id_C830[13] = "weapon_famas_clip";
-    level.scr_model["worldbody"] = "viewbody_tf141_arctic"; //here
-    level._id_B8AB = "spetsnaz_arctic_vh"; //here
-    maps\_load::set_player_viewhand_model( "tf141_arctic_player_vh" );
-    level.player setmodel( "spetsnaz_arctic_vh" ); //here
+    level._id_B8AB = "viewbody_tf141_arctic"; //here
+    level.scr_model["worldbody"] = "viewbody_tf141_arctic";
     _id_AAAB::main();
     maps\_drone_civilian::init();
     vehicle_scripts\_attack_heli::preload();
@@ -309,7 +306,7 @@ _id_B584()
     level.player _id_B3BA( 1 );
     var_0 = getent( "org_stealth_kill", "targetname" );
     var_1 = _id_BDC3( "02", var_0 );
-    var_1.origin = level.player.origin + ( 0.0, 0.0, 100.0 );
+    var_1.origin = level.player.origin + ( 0, 0, 100 );
     var_1 thread _id_AA61::_id_ABCA();
     wait 3;
     var_0 maps\_anim::anim_first_frame_solo( var_1, "intro_sequence" );
@@ -330,7 +327,7 @@ _id_CB65()
     common_scripts\utility::flag_set( "player_breaks_surface" );
     var_0 = getent( "org_stealth_kill", "targetname" );
     _id_D32B();
-    level.player setorigin( var_0.origin + ( 0.0, -65.0, 0.0 ) );
+    level.player setorigin( var_0.origin + ( 0, -65, 0 ) );
     level.player setplayerangles( var_0.angles );
     level.player disableweapons();
     thread _id_A833();
@@ -710,14 +707,14 @@ _id_B976()
     var_0 = 10;
     var_1 = 20;
     self moveto( self.origin + ( 0, 0, var_1 ), var_0, 1, 1 );
-    wait(var_0);
+    wait( var_0 );
     self delete();
 }
 
 _id_BAF2()
 {
     self endon( "death" );
-    var_0 = spawn( "script_origin", self.origin + ( 0.0, -900.0, -1800.0 ) );
+    var_0 = spawn( "script_origin", self.origin + ( 0, -900, -1800 ) );
     var_0 linkto( self );
 
     while ( !common_scripts\utility::flag( "player_ready_to_be_helped_from_water" ) )
@@ -874,9 +871,9 @@ _id_A833()
 _id_B187()
 {
     var_0 = getent( "org_water_level", "targetname" );
-    var_0.origin += ( 0.0, 0.0, 0.0 );
-    var_1 = spawn( "script_origin", ( 0.0, 0.0, 0.0 ) );
-    var_1.origin = level.player.origin + ( 0.0, 0.0, 10.0 );
+    var_0.origin += ( 0, 0, 0 );
+    var_1 = spawn( "script_origin", ( 0, 0, 0 ) );
+    var_1.origin = level.player.origin + ( 0, 0, 10 );
     var_1.angles = var_0.angles;
     var_2 = spawn( "script_model", var_1.origin );
     var_2 setmodel( "tag_origin" );
@@ -904,14 +901,14 @@ _id_CF31()
     var_0 = 2.4;
     var_1 = 3.2;
     self moveto( self.origin + ( 0, 0, var_1 / 2 ), var_0, 1, 1 );
-    wait(var_0);
+    wait( var_0 );
 
     while ( isdefined( self ) )
     {
         self moveto( self.origin + ( 0, 0, var_1 * -1 ), var_0, 1, 1 );
-        wait(var_0);
+        wait( var_0 );
         self moveto( self.origin + ( 0, 0, var_1 ), var_0, 1, 1 );
-        wait(var_0);
+        wait( var_0 );
     }
 }
 
@@ -921,14 +918,14 @@ _id_C71A()
     var_0 = 4;
     var_1 = 6;
     self rotateroll( var_0 / 2, var_1, var_1 / 2, var_1 / 2 );
-    wait(var_1);
+    wait( var_1 );
 
     while ( isdefined( self ) )
     {
         self rotateroll( var_0 * -1, var_1, var_1 / 2, var_1 / 2 );
-        wait(var_1);
+        wait( var_1 );
         self rotateroll( var_0, var_1, var_1 / 2, var_1 / 2 );
-        wait(var_1);
+        wait( var_1 );
     }
 }
 
@@ -947,7 +944,7 @@ _id_B9C1( var_0 )
 
     for ( var_11 = undefined; !common_scripts\utility::flag( "player_ready_to_be_helped_from_water" ); self.origin = var_15 )
     {
-        wait(var_2);
+        wait( var_2 );
         var_12 = level.player getnormalizedmovement();
         var_13 = anglestoforward( level.player.angles );
         var_14 = anglestoright( level.player.angles );
@@ -1048,8 +1045,8 @@ _id_BB4F()
     var_1[1] = _id_A908( "allies", "water_helper_02" );
     var_1[0].animname = "water_helper_01";
     var_1[1].animname = "water_helper_02";
-    // var_1[0] codescripts\character::setheadmodel( "h2_head_seal_udt_f_lifesaver" );
-    // var_1[1] codescripts\character::setheadmodel( "h2_head_seal_udt_i_lifesaver" );
+    //var_1[0] codescripts\character::setheadmodel( "h2_head_seal_udt_f_lifesaver" );
+    //var_1[1] codescripts\character::setheadmodel( "h2_head_seal_udt_i_lifesaver" );
     var_0 maps\_anim::anim_first_frame( var_1, "surface_helpout" );
     common_scripts\utility::flag_wait( "player_ready_to_be_helped_from_water" );
     var_0 maps\_anim::anim_single( var_1, "surface_helpout" );
@@ -1115,7 +1112,7 @@ _id_C9F3()
 _id_AF6A()
 {
     var_0 = getent( "org_water_exit", "targetname" );
-    var_0.origin += ( 0.0, 0.0, 10.0 );
+    var_0.origin += ( 0, 0, 10 );
     var_1 = getent( "org_stealth_kill", "targetname" );
     common_scripts\utility::flag_wait( "player_is_done_swimming" );
     setsaveddvar( "compass", "1" );
@@ -1158,10 +1155,16 @@ _id_AF6A()
     var_3 solid();
     thread _id_CBFA();
     common_scripts\utility::flag_set( "obj_stealthkill_complete" );
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
 _id_BAB7()
 {
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     level endon( "player_starting_stealth_kill" );
     var_0 = undefined;
     var_1 = getent( "trig_player_near_grate_guard", "script_noteworthy" );
@@ -1189,6 +1192,9 @@ _id_BAB7()
 
 _id_B831()
 {
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     level endon( "player_starting_stealth_kill" );
     var_0 = &"SCRIPT_PLATFORM_OILRIG_HINT_STEALTH_KILL";
     var_1 = level._id_C177;
@@ -1198,7 +1204,7 @@ _id_B831()
     {
         common_scripts\utility::flag_wait( "player_looking_at_grate_guard" );
         thread maps\_utility::hint( var_0, undefined, 100, undefined, "medium_background" );
-        objective_position( 1, ( 0.0, 0.0, 0.0 ) );
+        objective_position( 1, ( 0, 0, 0 ) );
         common_scripts\utility::flag_set( "player_in_position_for_stealth_kill" );
 
         while ( common_scripts\utility::flag( "player_looking_at_grate_guard" ) )
@@ -1255,6 +1261,9 @@ _id_CBFA()
         wait 0.05;
 
     thread _id_B916();
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
 _id_B916()
@@ -1267,10 +1276,16 @@ _id_B916()
     var_0 waittill( "trigger" );
     level.player thread common_scripts\utility::play_sound_in_space( "splash_player_water_enter" );
     thread _id_CBFA();
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
 _id_C4F5()
 {
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     common_scripts\utility::flag_wait( "player_starting_stealth_kill" );
     wait 2.8;
 }
@@ -1346,6 +1361,9 @@ _id_ADBE()
     common_scripts\utility::flag_wait( "lower_room_breached" );
     var_1 thread _id_BA48();
     var_5 delete();
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
 _id_B03A( var_0 )
@@ -1399,6 +1417,9 @@ _id_C0BF()
     var_1 maps\_utility::enable_ai_color();
     common_scripts\utility::flag_wait( "lower_room_breached" );
     var_1 thread _id_BA48();
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
 _id_D46B()
@@ -1426,6 +1447,7 @@ _id_D46B()
     thread animated_palette();
     disableforcedsunshadows();
     thread _id_D174();
+    
 }
 
 friendlies_pushplayer_until( var_0 )
@@ -1511,19 +1533,19 @@ _id_CD97()
 _id_AFD8()
 {
     level endon( "player_at_lower_breach" );
-    wait(randomfloatrange( 4, 6 ));
+    wait( randomfloatrange( 4, 6 ) );
 
     while ( common_scripts\utility::flag( "player_dealing_with_rail" ) )
         wait 0.5;
 
     maps\_utility::radio_dialogue( "oilrig_nsl_keepittight" );
-    wait(randomfloatrange( 6, 8 ));
+    wait( randomfloatrange( 6, 8 ) );
 
     while ( common_scripts\utility::flag( "player_dealing_with_rail" ) )
         wait 0.5;
 
     maps\_utility::radio_dialogue( "oilrig_nsl_readyweapons" );
-    wait(randomfloatrange( 6, 8 ));
+    wait( randomfloatrange( 6, 8 ) );
 
     while ( common_scripts\utility::flag( "player_dealing_with_rail" ) )
         wait 0.5;
@@ -1570,7 +1592,7 @@ _id_CECE()
         if ( level.player istouching( var_0 ) )
             _id_BCF6();
 
-        wait(randomfloatrange( 8, 14 ));
+        wait( randomfloatrange( 8, 14 ) );
     }
 }
 
@@ -1731,7 +1753,7 @@ _id_CB3F()
     var_0 = getentarray( "first_breach_safe_volumes", "targetname" );
 
     foreach ( var_2 in var_0 )
-        var_2.origin += ( 0.0, 0.0, 20000.0 );
+        var_2.origin += ( 0, 0, 20000 );
 }
 
 _id_AD25( var_0 )
@@ -1751,7 +1773,7 @@ _id_AD25( var_0 )
 
 _id_C503()
 {
-    var_0 = spawn( "script_origin", ( 0.0, 0.0, 0.0 ) );
+    var_0 = spawn( "script_origin", ( 0, 0, 0 ) );
     self waittill( "damage" );
 
     if ( isdefined( self ) && !_func_2A5( self ) )
@@ -1953,6 +1975,9 @@ _id_B1B0()
     common_scripts\utility::flag_set( "upper_room_breached" );
     var_0 notify( "stop soundoilrig_muffled_2nd_breach_voices" );
     thread _id_D510( var_0, 200 );
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
 _id_A9D6()
@@ -1988,6 +2013,9 @@ _id_C39C()
     thread _id_B233( 1 );
     var_0 waittill( "reached_dynamic_path_end" );
     var_0 delete();
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
 _id_BB17()
@@ -2030,6 +2058,9 @@ _id_C37E()
     common_scripts\utility::array_thread( var_0, ::_id_AC1B );
     var_1 = getentarray( "ambush_damage_triggers", "targetname" );
     common_scripts\utility::array_thread( var_1, ::_id_C064 );
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
 _id_C064()
@@ -2176,9 +2207,6 @@ _id_D4D5()
     var_0 maps\_anim::anim_reach_solo( level._id_AC03, "soap_go_up_scaffolding" );
     common_scripts\utility::flag_set( "soap_reached_scaffold" );
     var_0 = spawn( "script_origin", ( 1642.48, 135.2, -1055.5 ) );
-    //level._id_AC03.name = "Soap - Task Force 141"; //here
-    //level._id_AC03.name = "soap";
-    //level._id_D1AC.name = "Soap - Task Force 141"; //here
     var_0 maps\_anim::anim_generic( level._id_AC03, "soap_go_up_scaffolding" );
 }
 
@@ -2214,11 +2242,11 @@ _id_BA8F()
             if ( var_5 == "m4m203_silencer_reflex" && var_3 != "m4m203_silencer_reflex" && var_1 == 0 )
             {
                 level.player takeweapon( "m4m203_silencer_reflex" );
-                level.player giveweapon( "m4m203_reflex" );
+                level.player giveweapon( "m16_acog" );
                 var_1 = 1;
 
                 if ( isdefined( level.player.old_weapon ) && level.player.old_weapon == "m4m203_silencer_reflex" )
-                    level.player.old_weapon = "m4m203_reflex";
+                    level.player.old_weapon = "m16_acog";
             }
         }
     }
@@ -2230,7 +2258,7 @@ _id_C2F2()
     var_1 = getent( "prison_sequence_dummies_run", "script_noteworthy" );
     var_2 = var_0;
     var_3 = var_1;
-    var_4 = var_3.origin + ( 0.0, 0.0, 36.0 );
+    var_4 = var_3.origin + ( 0, 0, 36 );
     common_scripts\utility::flag_wait( "obj_c4_ambush_plant_given" );
     var_5 = getent( "volume_ambush_room", "script_noteworthy" );
     var_6 = var_5 maps\_utility::get_ai_touching_volume( "neutral" );
@@ -2314,7 +2342,7 @@ _id_B5D1( var_0, var_1 )
     maps\_utility::cqb_walk( "on" );
     self setgoalnode( var_1 );
     common_scripts\utility::flag_wait( "obj_c4_ambush_plant_given" );
-    wait(randomfloatrange( 2, 4 ));
+    wait( randomfloatrange( 2, 4 ) );
     var_0 maps\_anim::anim_generic_reach( self, "C4_plant_start" );
     self setgoalpos( self.origin );
 
@@ -2386,7 +2414,7 @@ _id_CF35()
     level endon( "ambush_c4_triggered" );
     var_0 = getent( "ambush_area", "targetname" );
     var_0 endon( "trigger" );
-    wait(randomintrange( 14, 18 ));
+    wait( randomintrange( 14, 18 ) );
     thread maps\_utility::radio_dialogue( "oilrig_nsl_elevatedposwait" );
 }
 
@@ -2427,11 +2455,11 @@ _id_A8C1( var_0 )
     level endon( "obj_c4_ambush_plant_complete" );
     level endon( "player_has_started_planting_c4" );
     level endon( "c4_placement_started" );
-    wait(randomintrange( 4, 6 ));
+    wait( randomintrange( 4, 6 ) );
     maps\_utility::radio_dialogue( "oilrig_nsl_donthavetime" );
-    wait(randomintrange( 4, 6 ));
+    wait( randomintrange( 4, 6 ) );
     maps\_utility::radio_dialogue( "oilrig_nsl_plantc4" );
-    wait(randomintrange( 4, 6 ));
+    wait( randomintrange( 4, 6 ) );
     maps\_utility::radio_dialogue( "oilrig_nsl_donthavetime" );
     wait 4;
     common_scripts\utility::flag_set( "friendlies_had_to_plant_C4" );
@@ -2510,14 +2538,14 @@ _id_BD1A( var_0, var_1, var_2, var_3 )
 
 playfirstframeplantanim( var_0, var_1, var_2 )
 {
-    wait(var_0);
+    wait( var_0 );
     self clearanim( var_2, 0 );
     maps\_anim::anim_first_frame_solo( self, var_1 );
 }
 
 _id_CC05( var_0, var_1, var_2, var_3, var_4 )
 {
-    var_5 = var_0 _id_AAAB::_id_D2A9( undefined, ( 0.0, 0.0, 0.0 ), ( 0.0, 0.0, 0.0 ), var_0.origin, undefined, undefined, var_1, undefined, undefined, undefined, 1, undefined, var_2, var_3, var_4 );
+    var_5 = var_0 _id_AAAB::_id_D2A9( undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), var_0.origin, undefined, undefined, var_1, undefined, undefined, undefined, 1, undefined, var_2, var_3, var_4 );
     var_0 thread disable_hud_c4_plant();
     var_0 thread _id_C364();
     var_0 thread _id_C515( var_5 );
@@ -2738,7 +2766,7 @@ _id_D26C()
     wait 1;
     var_0 = getaiarray( "axis" );
     var_1 = common_scripts\utility::getclosest( level.player.origin, var_0 );
-    var_2 = var_1.origin + ( 0.0, 0.0, -512.0 );
+    var_2 = var_1.origin + ( 0, 0, -512 );
     thread _id_C8BD( var_2 );
     wait 2;
     var_3 = level._id_AC03 maps\_utility::getanim( "oilrig_nsl_standby2" );
@@ -2794,14 +2822,14 @@ _id_D128()
     self kill();
     wait 0.1;
     var_0 = 8000;
-    self startragdollfromimpact( "torso_lower", var_0 * ( 0.0, -1.0, 0.5 ) );
+    self startragdollfromimpact( "torso_lower", var_0 * ( 0, -1, 0.5 ) );
 }
 
 _id_B2ED()
 {
     var_0 = getent( "hostile_c4_blowup", "targetname" );
     var_1 = var_0 maps\_utility::spawn_ai();
-    var_2 = var_1.origin + ( 0.0, 20.0, 35.0 );
+    var_2 = var_1.origin + ( 0, 20, 35 );
     var_1 thread _id_D128();
 
     if ( getdvarint( "disable_ambush_slowmo" ) != 1 )
@@ -2892,7 +2920,7 @@ _id_BCF3( var_0 )
         if ( isdefined( var_5 ) && isdefined( var_0.mgturret ) && maps\_utility::is_in_array( var_0.mgturret, var_5 ) )
         {
             level.player enableinvulnerability();
-            wait(var_1);
+            wait( var_1 );
             var_3++;
             var_1 /= 1.3;
             level.player disableinvulnerability();
@@ -2913,7 +2941,7 @@ _id_D407( var_0, var_1 )
 
     while ( !common_scripts\utility::flag( var_1 ) )
     {
-        wait(randomfloatrange( 15, 25 ));
+        wait( randomfloatrange( 15, 25 ) );
 
         if ( isdefined( var_0 ) && isdefined( var_0.firingguns ) && var_0.firingguns == 1 )
         {
@@ -2967,10 +2995,13 @@ _id_CB17()
 
 _id_D164()
 {
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     common_scripts\utility::flag_wait( "player_at_deck1_midpoint" );
     maps\_utility::battlechatter_off( "allies" );
     thread maps\_utility::autosave_by_name( "deck2_start" );
-    wait(randomfloatrange( 1, 2 ));
+    wait( randomfloatrange( 1, 2 ) );
     maps\_utility::radio_dialogue( "oilrig_sbc_gettolz" );
     thread maps\_utility::radio_dialogue( "oilrig_nsl_copythat2" );
     common_scripts\utility::flag_set( "zodiacs_evaced" );
@@ -2989,6 +3020,9 @@ _id_D164()
 
 _id_AFA1()
 {
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     common_scripts\utility::flag_wait( "player_at_stairs_to_deck_2" );
     var_0 = maps\_vehicle::spawn_vehicles_from_targetname_and_drive( "zodiacs_evac" );
     var_0[0] thread maps\oilrig_aud::aud_zodiac_hostage_extraction();
@@ -3125,7 +3159,7 @@ _id_C291( var_0 )
     {
         var_5 = spawn( "script_model", var_4.origin );
         var_5 setmodel( "weapon_us_smoke_grenade_burnt" );
-        var_5.angles = ( 0.0, 0.0, 90.0 );
+        var_5.angles = ( 0, 0, 90 );
     }
 
     for (;;)
@@ -3135,7 +3169,7 @@ _id_C291( var_0 )
         foreach ( var_4 in var_0 )
         {
             var_4 thread common_scripts\utility::play_sound_in_space( "h1_wpn_smoke_pop" );
-            wait(randomfloatrange( 0.1, 0.3 ));
+            wait( randomfloatrange( 0.1, 0.3 ) );
         }
 
         foreach ( var_4 in var_0 )
@@ -3221,6 +3255,9 @@ _id_C671()
 
 _id_CF56()
 {
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     common_scripts\utility::flag_wait( "player_at_stairs_to_top_deck" );
     var_0 = getentarray( "breach_save_deck3", "targetname" );
     common_scripts\utility::array_thread( var_0, ::_id_A804 );
@@ -3228,6 +3265,9 @@ _id_CF56()
 
 _id_A804()
 {
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     level endon( "breach_deck3_autosave_threaded" );
     level endon( "A door in breach group 300 has been activated." );
     var_0 = undefined;
@@ -3291,7 +3331,7 @@ _id_CB9E()
         self attach( "projectile_slamraam_missile", var_1, 1 );
 
     var_3 = 4.4;
-    wait(randomfloatrange( 0, 1.5 ));
+    wait( randomfloatrange( 0, 1.5 ) );
     var_4 = getent( self.target, "targetname" );
 
     while ( !common_scripts\utility::flag( "top_deck_room_breached" ) )
@@ -3305,11 +3345,11 @@ _id_CB9E()
             break;
 
         self rotateyaw( 45, var_3, var_3 / 2, var_3 / 2 );
-        wait(var_3);
-        wait(randomfloatrange( 0, 2 ));
+        wait( var_3 );
+        wait( randomfloatrange( 0, 2 ) );
         self rotateyaw( -45, var_3, var_3 / 2, var_3 / 2 );
-        wait(var_3);
-        wait(randomfloatrange( 0, 1.5 ));
+        wait( var_3 );
+        wait( randomfloatrange( 0, 1.5 ) );
     }
 }
 
@@ -3570,7 +3610,7 @@ _id_C00C()
     common_scripts\utility::flag_wait( "derrick_room_getting_breached" );
     self show();
     self notsolid();
-    wait(randomfloatrange( 0, 0.6 ));
+    wait( randomfloatrange( 0, 0.6 ) );
     playfxontag( common_scripts\utility::getfx( "light_c4_blink_nodlight" ), self, "tag_fx" );
     common_scripts\utility::flag_wait( "player_on_board_littlebird" );
     self delete();
@@ -3806,8 +3846,8 @@ _id_CC8C( var_0 )
     var_6 = common_scripts\utility::spawn_tag_origin();
     var_6.origin = self gettagorigin( var_0 );
     var_6.angles = self gettagangles( var_0 );
-    var_6.angles += ( 0.0, 0.0, 0.0 );
-    var_6 linkto( self, var_0, ( 0.0, 0.0, 0.0 ), ( 0.0, -90.0, 0.0 ) );
+    var_6.angles += ( 0, 0, 0 );
+    var_6 linkto( self, var_0, ( 0, 0, 0 ), ( 0, -90, 0 ) );
     var_5 waittill( "trigger" );
     thread dof_climb_in_heli();
     soundscripts\_snd::snd_message( "aud_start_player_inside_helicopter" );
@@ -3835,9 +3875,9 @@ _id_CC8C( var_0 )
     var_14 = spawn( "script_origin", level.player.origin );
     var_14.angles = level.player getplayerangles();
     level.player playerlinkto( var_14, undefined, 1.0, 0.0, 0.0, 0.0, 0.0 );
-    var_14 moveto( level.player.worldbody_rig gettagorigin( "tag_camera" ) - ( 0.0, 0.0, 60.0 ), var_13, var_13 * 0.2, var_13 * 0.2 );
+    var_14 moveto( level.player.worldbody_rig gettagorigin( "tag_camera" ) - ( 0, 0, 60 ), var_13, var_13 * 0.2, var_13 * 0.2 );
     var_14 rotateto( level.player.worldbody_rig gettagangles( "tag_camera" ), var_13, var_13 * 0.2, var_13 * 0.2 );
-    wait(var_13);
+    wait( var_13 );
     level.player playerlinktodelta( level.player.worldbody_rig, "tag_player", var_8, var_9, var_10, var_11, var_12, 1 );
     level.player.worldbody_rig show();
     maps\_anim::anim_single_solo( level.player.worldbody_rig, "escape_in", var_0 );
@@ -3881,6 +3921,9 @@ handle_soap_headtracking()
 
 handleghostmovement( var_0 )
 {
+    level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
+    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     level._id_C280.animname = "generic";
     var_0 maps\_anim::anim_reach_solo( level._id_C280, "escape_in" );
 
@@ -3909,8 +3952,9 @@ player_gets_weapon_from_soap_on_littlebird( var_0 )
     common_scripts\utility::flag_wait( "player_switches_weapon_on_littlebird" );
     var_1 delete();
     level.player takeallweapons();
-    level.player giveweapon( "m14_scoped_arctic" );
-    level.player switchtoweapon( "m14_scoped_arctic" );
+    level.player giveweapon( "dragunov_arctic" );
+    level.player giveweapon( "m16_acog" );
+    level.player switchtoweapon( "dragunov_arctic" );
     level.player enableweapons();
     level.player lerpviewangleclamp( 0.5, 0.1, 0.1, 60, 40, 10, 30 );
     level.player setviewangleresistance( 50, 50, 20, 20 );
@@ -4021,7 +4065,7 @@ _id_C364()
 
     level._id_AC30 = common_scripts\utility::array_remove( level._id_AC30, self );
     waittillframeend;
-    objective_additionalposition( 3, var_0, ( 0.0, 0.0, 0.0 ) );
+    objective_additionalposition( 3, var_0, ( 0, 0, 0 ) );
 
     if ( level._id_AC30.size < 2 )
         common_scripts\utility::flag_set( "obj_c4_ambush_plant_complete" );
@@ -4048,7 +4092,7 @@ _id_D318()
     objective_current( var_0 );
     objective_onentity( var_0, level._id_AC03 );
     common_scripts\utility::flag_wait( "player_on_right_top_deck" );
-    objective_position( var_0, ( 0.0, 0.0, 0.0 ) );
+    objective_position( var_0, ( 0, 0, 0 ) );
     var_1 = getentarray( "obj_breach3", "targetname" );
     maps\_slowmo_breach::objective_breach( var_0, 4, 5 );
     common_scripts\utility::flag_wait( "top_deck_room_breached" );
@@ -4067,10 +4111,10 @@ obj_escape()
     objective_onentity( var_0, level._id_AC03 );
     common_scripts\utility::flag_wait( "player_at_helipad_stairs" );
     common_scripts\utility::flag_wait( "escape_littlebird_landed" );
-    objective_position( var_0, ( 0.0, 0.0, 0.0 ) );
+    objective_position( var_0, ( 0, 0, 0 ) );
     var_1 = getent( "obj_escape", "targetname" );
     var_1.origin = level._id_D1AC gettagorigin( "tag_guy3" );
-    var_1.origin += ( 0.0, 0.0, 30.0 );
+    var_1.origin += ( 0, 0, 30 );
     objective_position( var_0, var_1.origin );
     common_scripts\utility::flag_wait( "obj_escape_complete" );
     objective_state( var_0, "done" );
@@ -4097,7 +4141,7 @@ _id_B295()
     while ( !common_scripts\utility::flag( "lower_room_breached" ) )
     {
         maps\_utility::musicplaywrapper( "mus_oilrig_sneak_music" );
-        wait(var_0);
+        wait( var_0 );
         maps\_utility::music_stop( 1 );
         wait 1.1;
     }
@@ -4114,7 +4158,7 @@ _id_CE03()
     while ( !common_scripts\utility::flag( "upper_room_breached" ) )
     {
         maps\_utility::musicplaywrapper( "mus_oilrig_suspense_01_music_alt" );
-        wait(var_0);
+        wait( var_0 );
         maps\_utility::music_stop( 1 );
         wait 1.1;
     }
@@ -4135,7 +4179,7 @@ _id_D24E()
     while ( !common_scripts\utility::flag( "player_at_stairs_to_deck_2" ) )
     {
         maps\_utility::musicplaywrapper( "mus_oilrig_fight_music_01" );
-        wait(var_0);
+        wait( var_0 );
         maps\_utility::music_stop( 1 );
         wait 1.1;
     }
@@ -4152,7 +4196,7 @@ _id_AA57()
     while ( !common_scripts\utility::flag( "smoke_thrown" ) )
     {
         maps\_utility::musicplaywrapper( "mus_oilrig_fight_music_01" );
-        wait(var_0);
+        wait( var_0 );
         maps\_utility::music_stop( 1 );
         wait 1.1;
     }
@@ -4169,7 +4213,7 @@ _id_B6E8()
     while ( !common_scripts\utility::flag( "top_deck_room_breached" ) )
     {
         maps\_utility::musicplaywrapper( "mus_oilrig_top_deck_music_01" );
-        wait(var_0);
+        wait( var_0 );
         maps\_utility::music_stop( 1 );
         wait 1.1;
     }
@@ -4438,7 +4482,7 @@ _id_BAA2()
     while ( self.breachfinished == 0 )
         wait 0.1;
 
-    wait(randomfloatrange( 1, 2 ));
+    wait( randomfloatrange( 1, 2 ) );
     var_0 = level._id_CCFA[0];
     level._id_CCFA = common_scripts\utility::array_remove( level._id_CCFA, var_0 );
     self endon( "death" );
@@ -4534,7 +4578,7 @@ _id_C451( var_0 )
 
 _id_B159( var_0 )
 {
-    wait(var_0);
+    wait( var_0 );
     level notify( "oilrig_timeout_func" );
 }
 
@@ -4585,9 +4629,9 @@ _id_BF10( var_0 )
     for (;;)
     {
         if ( var_0 == 300 )
-            wait(randomfloatrange( 5, 8 ));
+            wait( randomfloatrange( 5, 8 ) );
         else
-            wait(randomfloatrange( 12, 18 ));
+            wait( randomfloatrange( 12, 18 ) );
 
         if ( var_0 == 300 )
         {
@@ -4656,14 +4700,14 @@ _id_AFCD( var_0, var_1 )
     var_2 connectpaths();
 
     if ( isdefined( var_0 ) )
-        var_2 moveto( var_2.origin - ( 0.0, -170.0, 0.0 ), 1 );
+        var_2 moveto( var_2.origin - ( 0, -170, 0 ), 1 );
     else
     {
         if ( !isdefined( var_1 ) )
             common_scripts\utility::flag_wait_either( "ambush_enemies_approaching", "ambush_enemies_alerted_prematurely" );
 
         var_2 thread maps\_utility::play_sound_on_entity( "scn_oilrig_fence_open" );
-        var_2 moveto( var_2.origin - ( 0.0, -170.0, 0.0 ), 8, 3, 3 );
+        var_2 moveto( var_2.origin - ( 0, -170, 0 ), 8, 3, 3 );
         wait 8;
     }
 
@@ -4749,7 +4793,6 @@ _id_B2C8()
     precachestring( &"OILRIG_HINT_THERMAL_WEAPON_FIND" );
     precacheshader( "h1_hud_tutorial_blur" );
     precacheshader( "h1_hud_tutorial_border" );
-
 }
 
 _id_B351( var_0, var_1, var_2 )
@@ -4769,12 +4812,10 @@ _id_B351( var_0, var_1, var_2 )
         common_scripts\utility::array_thread( level.team2, ::_id_CE4E );
         level.squad = [];
         level._id_AC03 = maps\_utility::spawn_script_noteworthy( "price" );
-        
         level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
         level._id_AC03.animname = "soap";
         level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
         level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
-
         level._id_C280 = maps\_utility::spawn_script_noteworthy( "friendly02" );
         level._id_BBBD = maps\_utility::spawn_script_noteworthy( "friendly03" );
         level._id_AC03 maps\_utility::forceuseweapon( "mp5_silencer_reflex", "primary" );
@@ -4810,19 +4851,19 @@ _id_B351( var_0, var_1, var_2 )
                         level._id_AC03 maps\_utility::teleport_ai( var_5[var_6] );
                         var_4 = common_scripts\utility::array_remove( var_4, level._id_AC03 );
                         var_5 = common_scripts\utility::array_remove( var_5, var_5[var_6] );
-                        continue;
+                        break;
                     case "nodeFriendly02":
                         level._id_C280 maps\_utility::teleport_ai( var_5[var_6] );
                         var_4 = common_scripts\utility::array_remove( var_4, level._id_C280 );
                         var_5 = common_scripts\utility::array_remove( var_5, var_5[var_6] );
-                        continue;
+                        break;
                     case "nodeFriendly03":
                         level._id_BBBD maps\_utility::teleport_ai( var_5[var_6] );
                         var_4 = common_scripts\utility::array_remove( var_4, level._id_BBBD );
                         var_5 = common_scripts\utility::array_remove( var_5, var_5[var_6] );
-                        continue;
+                        break;
                     default:
-                        continue;
+                        break;
                 }
             }
         }
@@ -4985,7 +5026,7 @@ _id_C5AE( var_0 )
 
     foreach ( var_3 in var_0 )
     {
-        wait(randomfloatrange( 0.25, 1 ));
+        wait( randomfloatrange( 0.25, 1 ) );
         var_4 = var_3 maps\_utility::spawn_ai();
         var_1[var_1.size] = var_4;
     }
@@ -4998,7 +5039,7 @@ _id_B563()
     self._id_BCA9 = self.origin;
     self._id_AC23 = self.angles;
     self rotateyaw( 160, 0.5 );
-    self moveto( self.origin + ( 3.0, 0.0, 0.0 ), 0.1 );
+    self moveto( self.origin + ( 3, 0, 0 ), 0.1 );
     self connectpaths();
 }
 
@@ -5007,7 +5048,7 @@ _id_BB54()
     self._id_BCA9 = self.origin;
     self._id_AC23 = self.angles;
     self rotateyaw( -110, 0.5 );
-    self moveto( self.origin + ( 3.0, 0.0, 0.0 ), 0.1 );
+    self moveto( self.origin + ( 3, 0, 0 ), 0.1 );
     self connectpaths();
 }
 
@@ -5034,7 +5075,7 @@ _id_D5C4( var_0 )
 
 _id_BD1F( var_0, var_1 )
 {
-    var_2 = spawn( "script_model", var_1.origin + ( 0.0, 0.0, 0.0 ) );
+    var_2 = spawn( "script_model", var_1.origin + ( 0, 0, 0 ) );
     var_2 setmodel( "vehicle_submarine_nuclear" );
     var_2.origin = var_1.origin;
     var_2.angles = var_1.angles;
@@ -5091,15 +5132,15 @@ _id_BD1F( var_0, var_1 )
     var_2.animname = "submarine_" + var_0;
 
     if ( var_2.animname == "submarine_01" )
-        var_2.body linkto( var_2, "TAG_ORIGIN", ( -10.0, 0.0, -324.0 ), ( 0.0, 0.0, 0.0 ) );
+        var_2.body linkto( var_2, "TAG_ORIGIN", ( -10, 0, -324 ), ( 0, 0, 0 ) );
     else
-        var_2.body linkto( var_2, "TAG_ORIGIN", ( -10.0, 0.0, -348.0 ), ( 0.0, 0.0, 0.0 ) );
+        var_2.body linkto( var_2, "TAG_ORIGIN", ( -10, 0, -348 ), ( 0, 0, 0 ) );
 
     var_2.body show();
     var_2._id_C83D linkto( var_2.dds );
     var_2.dds.origin = var_2.origin;
     var_2.dds.angles = var_2.angles;
-    var_2.dds linkto( var_2, "TAG_ORIGIN", ( 330.0, 0.0, 100.0 ), ( 0.0, 0.0, 0.0 ) );
+    var_2.dds linkto( var_2, "TAG_ORIGIN", ( 330, 0, 100 ), ( 0, 0, 0 ) );
     var_2 maps\_utility::assign_animtree();
     var_2 hidepart( "origin_animate_jnt" );
     var_2 thread _id_C191();
@@ -5108,7 +5149,7 @@ _id_BD1F( var_0, var_1 )
 
 _id_BDC3( var_0, var_1 )
 {
-    var_2 = spawn( "script_model", var_1.origin + ( 0.0, 0.0, 0.0 ) );
+    var_2 = spawn( "script_model", var_1.origin + ( 0, 0, 0 ) );
     var_2 setmodel( "vehicle_submarine_sdv" );
     var_2.origin = var_1.origin;
     var_2.angles = var_1.angles;
@@ -5156,7 +5197,7 @@ _id_C191()
 
 _id_C455()
 {
-    self rotateto( self.angles + ( 0.0, -90.0, 0.0 ), 12, 2, 2 );
+    self rotateto( self.angles + ( 0, -90, 0 ), 12, 2, 2 );
     self playsound( "scn_subhatch_open" );
 }
 
@@ -5231,7 +5272,7 @@ _id_B731( var_0 )
 
     while ( isdefined( var_0 ) )
     {
-        wait(randomfloatrange( 15, 25 ));
+        wait( randomfloatrange( 15, 25 ) );
         var_5 = undefined;
         level.squad = maps\_utility::remove_dead_from_array( level.squad );
         var_6 = common_scripts\utility::get_array_of_farthest( level.player.origin, level.squad );
@@ -5252,7 +5293,7 @@ _id_B731( var_0 )
                     continue;
                 else
                 {
-                    var_3 = spawn( "script_origin", var_0.origin + ( 0.0, 0.0, -200.0 ) );
+                    var_3 = spawn( "script_origin", var_0.origin + ( 0, 0, -200 ) );
                     var_0 thread common_scripts\utility::delete_on_death( var_3 );
                     var_3 linkto( var_0 );
 
@@ -5364,10 +5405,10 @@ _id_C097()
     {
         wait 1;
 
-        if ( !common_scripts\utility::within_fov( self.origin, self.angles, level.player.origin + ( 0.0, 0.0, 32.0 ), level.cosine["45"] ) )
+        if ( !common_scripts\utility::within_fov( self.origin, self.angles, level.player.origin + ( 0, 0, 32 ), level.cosine["45"] ) )
             continue;
 
-        if ( !sighttracepassed( self.origin + ( 0.0, 0.0, 32.0 ), level.player.origin + ( 0.0, 0.0, 32.0 ), 0, self ) )
+        if ( !sighttracepassed( self.origin + ( 0, 0, 32 ), level.player.origin + ( 0, 0, 32 ), 0, self ) )
             continue;
 
         if ( distancesquared( self.origin, level.player.origin ) < level._id_A933 )
@@ -5414,7 +5455,7 @@ _id_D432()
 
 _id_B391( var_0, var_1 )
 {
-    wait(var_0);
+    wait( var_0 );
     setculldist( var_1 );
 }
 
@@ -5484,7 +5525,7 @@ _id_D3A5()
 
     for (;;)
     {
-        wait(randomfloatrange( 0.5, 1.5 ));
+        wait( randomfloatrange( 0.5, 1.5 ) );
 
         while ( _id_CFAC() )
         {
@@ -5534,7 +5575,7 @@ _id_C71C()
     var_1 = getent( "effects_lower_rig", "script_noteworthy" );
     var_2 = getent( "effects_mid_decks", "script_noteworthy" );
     var_3 = getent( "effects_top_deck", "script_noteworthy" );
-    var_4 = spawn( "script_origin", ( 0.0, 0.0, 0.0 ) );
+    var_4 = spawn( "script_origin", ( 0, 0, 0 ) );
 
     for ( var_5 = 0; var_5 < level.createfxent.size; var_5++ )
     {
@@ -5930,22 +5971,34 @@ replacemodelforwetallies()
 
     switch ( self.headmodel )
     {
-        case "head_opforce_arctic_a":
-        case "head_opforce_arctic_b":
-            // codescripts\character::setheadmodel( self.headmodel + "_wet" );
-            // break;
+        case "head_seal_udt_asia":
+        case "head_seal_udt_i":
+        case "head_seal_udt_f":
+        case "head_seal_udt_e":
+        case "head_seal_udt_d":
+        case "head_seal_udt_c":
+        case "head_seal_udt_a":
+        case "head_seal_udt_asia_lifesaver":
+        case "head_seal_udt_i_lifesaver":
+        case "head_seal_udt_f_lifesaver":
+        case "head_seal_udt_d_lifesaver":
+        case "head_hero_soap_udt":
+        case "head_hero_ghost_udt":
+            codescripts\character::setheadmodel( self.headmodel + "_wet" );
+            break;
         default:
             break;
     }
 
     switch ( self.model )
     {
-        case "body_opforce_arctic_assault_a":
-        case "body_opforce_arctic_lmg":
-        case "body_opforce_arctic_shotgun":
-        case "body_opforce_arctic_smg":
-            // self setmodel( self.model + "_wet" );
-            // break;
+        case "body_seal_udt_smg":
+        case "body_seal_udt_assault_b":
+        case "body_seal_udt_assault_a":
+        case "body_hero_seal_udt_soap":
+        case "body_hero_seal_udt_ghost":
+            self setmodel( self.model + "_wet" );
+            break;
         default:
             break;
     }
@@ -5962,13 +6015,13 @@ replacemodelforwetallies()
 
 replacemodelforwetplayer()
 {
-    level.scr_model["player_rig"] = "spetsnaz_arctic_vh"; //here
-    level.player setviewmodel( "spetsnaz_arctic_vh" ); //here
+    level.scr_model["player_rig"] = "spetsnaz_arctic_vh";
+    level.player setviewmodel( "spetsnaz_arctic_vh" );
     common_scripts\utility::flag_wait( "obj_c4_ambush_plant_complete" );
-    level.scr_model["player_rig"] = "spetsnaz_arctic_vh"; //here
-    level.player setviewmodel( "spetsnaz_arctic_vh" ); //here
-    level.scr_model["h2_active_breacher_rig"] = "viewbody_tf141_arctic"; //here
-    level.scr_model["worldbody"] = "viewbody_tf141_arctic"; //here
+    level.scr_model["player_rig"] = "spetsnaz_arctic_vh";
+    level.player setviewmodel( "spetsnaz_arctic_vh" );
+    level.scr_model["h2_active_breacher_rig"] = "viewbody_tf141_arctic";
+    level.scr_model["worldbody"] = "viewbody_tf141_arctic";
 }
 
 soap_stairs_anim()
@@ -5994,7 +6047,7 @@ submarine_02_dds()
     self._id_C83D linkto( self.dds );
     self.dds.origin = self.origin;
     self.dds.angles = self.angles;
-    self.dds linkto( self, "TAG_ORIGIN", ( 330.0, 0.0, 100.0 ), ( 0.0, 0.0, 0.0 ) );
+    self.dds linkto( self, "TAG_ORIGIN", ( 330, 0, 100 ), ( 0, 0, 0 ) );
 }
 
 rotating_drill( var_0, var_1 )
@@ -6002,7 +6055,7 @@ rotating_drill( var_0, var_1 )
     for (;;)
     {
         self rotatevelocity( ( 0, var_0, 0 ), var_1 );
-        wait(var_1);
+        wait( var_1 );
     }
 }
 
@@ -6019,7 +6072,7 @@ c4_in_hand( var_0 )
     wait 1;
     self attach( "weapon_c4", "tag_inhand" );
     var_1 = getanimlength( level.scr_anim["generic"]["C4_plant_start"] );
-    wait(var_1 - 1);
+    wait( var_1 - 1 );
     var_0 show();
     self detach( "weapon_c4", "tag_inhand" );
     playfxontag( common_scripts\utility::getfx( "light_c4_blink_nodlight" ), var_0, "tag_fx" );
@@ -6119,7 +6172,7 @@ spawn_weapon_m14()
 {
     var_0 = spawn( "script_model", level._id_D1AC.origin );
     var_0 setmodel( "h2_weapon_m14ebr_scoped_arctic" );
-    var_0 linkto( level._id_D1AC, "tag_detach_left", ( -18.0, 10.0, 28.0 ), ( 286.082, 300.887, -33.5348 ) );
+    var_0 linkto( level._id_D1AC, "tag_detach_left", ( -18, 10, 28 ), ( 286.082, 300.887, -33.5348 ) );
     common_scripts\utility::flag_wait( "littlebird_escape_lifted_off" );
     var_0 delete();
 }
@@ -6291,7 +6344,7 @@ info_volume_objects_hide()
 
     foreach ( var_8 in var_5 )
     {
-        if ( var_8.model == "mil_frame_charge" || var_8.model == "h2_oilr_door_breaching_undamaged" || var_8.model == "spetsnaz_vh" || var_8.model == "oilrig_water_plane" || var_8.model == "oilrig_water_plane_far" || var_8.model == "oilrig_water_plane_near" || var_8.model == "h2_oilr_water_under_top" || var_8.model == "h2_fav_garage_door_03_animated" || var_8.model == "weapon_c4" || var_8.model == "h2_oilr_water_under_02" || var_8.model == "h2_oilr_water_under" || var_8.model == "h2_oilr_water_under_top" || var_8.model == "intel_item_laptop" )
+        if ( var_8.model == "mil_frame_charge" || var_8.model == "h2_oilr_door_breaching_undamaged" || var_8.model == "viewhands_player_udt" || var_8.model == "oilrig_water_plane" || var_8.model == "oilrig_water_plane_far" || var_8.model == "oilrig_water_plane_near" || var_8.model == "h2_oilr_water_under_top" || var_8.model == "h2_fav_garage_door_03_animated" || var_8.model == "weapon_c4" || var_8.model == "h2_oilr_water_under_02" || var_8.model == "h2_oilr_water_under" || var_8.model == "h2_oilr_water_under_top" || var_8.model == "intel_item_laptop" )
             var_6 = common_scripts\utility::array_add( var_6, var_8 );
     }
 
@@ -6393,6 +6446,7 @@ h2_intro_zodiac_wibble()
         wait 2;
     }
 }
+
 #using_animtree("generic_human");
 
 init_custom_death_anim()

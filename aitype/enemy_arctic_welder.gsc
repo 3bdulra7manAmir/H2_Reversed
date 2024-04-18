@@ -30,9 +30,13 @@ main()
 
 	self.weapon = "ak47_arctic";
 
-	if(level.script == "cliffhanger")
+	if(level.script == "cliffhanger" || level.script == "contingency")
 	{
 		character\character_sp_usmc_force_rnd::main();
+	}
+	else
+	{
+		character\character_tf141_arctic_rnd::main();
 	}
 }
 
@@ -44,6 +48,7 @@ spawner()
 precache()
 {
 	character\character_sp_usmc_force_rnd::precache();
+	character\character_tf141_arctic_rnd::precache();
 	precacheItem("ak47_arctic");
 	precacheItem("usp");
 	precacheItem("fraggrenade");

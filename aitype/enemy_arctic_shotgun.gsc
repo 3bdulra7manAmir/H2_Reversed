@@ -38,9 +38,13 @@ main()
 		break;
 	}
 
-	if(level.script == "cliffhanger")
+	if(level.script == "cliffhanger" || level.script == "contingency")
 	{
 		character\character_sp_usmc_force_rnd::main();
+	}
+	else
+	{
+		character\character_tf141_arctic_rnd::main();
 	}
 }
 
@@ -52,6 +56,7 @@ spawner()
 precache()
 {
 	character\character_sp_usmc_force_rnd::precache();
+	character\character_tf141_arctic_rnd::precache();
 	precacheItem("spas12_arctic");
 	precacheItem("spas12");
 	precacheItem("usp");

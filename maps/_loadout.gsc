@@ -38,7 +38,7 @@ give_loadout()
 
     maps\_loadout_code::loadout( "arcadia", "fal_shotgun", "dragunov", "fraggrenade", "flash_grenade", "spetsnaz_vh", "american" );
 
-    maps\_loadout_code::loadout( "oilrig", "kriss_acog_silencer", "glock", "fraggrenade", "flash_grenade", "spetsnaz_vh", "seal" );
+    maps\_loadout_code::loadout( "oilrig", "kriss_acog_silencer", "scar_h_thermal_silencer", "fraggrenade", "flash_grenade", "spetsnaz_vh", "seal" );
 
     maps\_loadout_code::loadout( "gulag", "m14_scoped_arctic", undefined, "fraggrenade", "flash_grenade", "spetsnaz_arctic_vh", "seal" );
 
@@ -139,8 +139,12 @@ give_loadout()
 
     precachemodel("spetsnaz_vh");
     precachemodel("spetsnaz_player_vh");
+
     precachemodel("spetsnaz_arctic_vh");
-    precachemodel("tf141_arctic_player_vh");
+    precachemodel("tf141_arctic_player_vh"); //here working
+
+    precachemodel("viewbody_tf141_arctic");
+    precachemodel("vb_us_army");
 
     precacheitem("ak47_arctic");
     precacheitem("ak47_arctic_acog");
