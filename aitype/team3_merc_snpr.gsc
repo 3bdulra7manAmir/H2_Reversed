@@ -41,18 +41,7 @@ main()
 		break;
 	}
 
-	switch( codescripts\character::get_random_character(3) )
-	{
-	case 0:
-		character\character_opforce_merc_smg_a::main();
-		break;
-	case 1:
-		character\character_opforce_merc_smg_b::main();
-		break;
-	case 2:
-		character\character_opforce_merc_smg_c::main();
-		break;
-	}
+	character\character_spetsnaz_sniper::main();
 }
 
 spawner()
@@ -62,10 +51,7 @@ spawner()
 
 precache()
 {
-	character\character_opforce_merc_smg_a::precache();
-	character\character_opforce_merc_smg_b::precache();
-	character\character_opforce_merc_smg_c::precache();
-
+	character\character_spetsnaz_sniper::precache();
 	precacheItem("dragunov");
 	precacheItem("dragunov_woodland");
 	precacheItem("pp2000");

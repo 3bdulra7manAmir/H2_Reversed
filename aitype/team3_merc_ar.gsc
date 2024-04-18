@@ -62,18 +62,7 @@ main()
 		break;
 	}
 
-	switch( codescripts\character::get_random_character(3) )
-	{
-	case 0:
-		character\character_opforce_merc_assault_a::main();
-		break;
-	case 1:
-		character\character_opforce_merc_assault_b::main();
-		break;
-	case 2:
-		character\character_opforce_merc_assault_c::main();
-		break;
-	}
+	character\character_merc_rnd::main();
 }
 
 spawner()
@@ -83,10 +72,7 @@ spawner()
 
 precache()
 {
-	character\character_opforce_merc_assault_a::precache();
-	character\character_opforce_merc_assault_b::precache();
-	character\character_opforce_merc_assault_c::precache();
-
+	character\character_merc_rnd::precache();
 	precacheItem("tavor_woodland_acog");
 	precacheItem("tavor_mars");
 	precacheItem("tavor_woodland_eotech");
