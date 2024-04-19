@@ -43,7 +43,9 @@ main()
     maps\_drone_ai::init();
     animscripts\dog\dog_init::initdoganimations();
     _id_CDB1::main();
+    level.scr_model["worldbody"] = "vb_us_army"; //here
     maps\_load::set_player_viewhand_model( "spetsnaz_player_vh" ); //here
+    level.player setViewmodel( "spetsnaz_vh" );
     maps\_load::main();
     _id_B0E5::_id_C2BC();
     maps\favela_anim::main();
@@ -470,7 +472,7 @@ _id_AC9B()
     thread maps\favela_code::_id_BBCE( "animated_chains" );
     level._id_B0E8 = maps\_utility::spawn_targetname( "royce_spawner", 1 );
     level._id_B0E8 thread maps\_utility::magic_bullet_shield();
-    level._id_B0E8.name = "Royce - Shadow Company";
+    level._id_B0E8.name = "Alex - Ultranationalist";
     level._id_B0E8.animname = "royce";
     // level._id_B0E8 maps\favela_code::setheadmodel( "head_seal_soccom_b" );
     level._id_B0E8 maps\_utility::forceuseweapon( "m4_grenadier", "primary" );
@@ -969,8 +971,8 @@ _id_CC36()
 _id_B1E6( var_0 )
 {
     level._id_D13B = maps\_utility::spawn_targetname( "soap_spawner", 1 );
-    level._id_D13B.name = "Soap - Shadow Company"; //here
-    level._id_B8D7.name = "Ghost - Shadow Company"; //here
+    level._id_D13B.name = "Val. Makarov - Ultranationalist"; //here
+    level._id_B8D7.name = "Sgt. Yuri - Ultranationalist"; //here
     level._id_D13B maps\_utility::set_ignoreall( 1 );
     level._id_D13B.usechokepoints = 0;
     level._id_D13B.fixednode = 0;
@@ -1070,7 +1072,7 @@ _id_B07D()
     level._id_D13B endon( "death" );
     level endon( "runner_shot" );
     var_0 = getent( "soapCarHitStart", "targetname" );
-    level._id_B8D7.name = "Ghost - Shadow Company";
+    level._id_B8D7.name = "Sgt. Yuri - Ultranationalist"; //here
     var_1 = getent( "carHittingSoap", "targetname" );
     var_1.animname = "car";
     var_1 maps\_anim::setanimtree();
@@ -1321,8 +1323,8 @@ _id_B971( var_0, var_1, var_2 )
     level notify( "black_screen_start" );
     wait(var_2);
     level notify( "black_screen_finish" );
-    level._id_D13B.name = "Soap - Shadow Company"; //here
-    level._id_B8D7.name = "Ghost - Shadow Company"; //here
+    level._id_D13B.name = "Val. Makarov - Ultranationalist"; //here
+    level._id_B8D7.name = "Sgt. Yuri - Ultranationalist"; //here
 
     if ( var_1 > 0 )
         var_3 fadeovertime( var_1 );
@@ -1331,8 +1333,8 @@ _id_B971( var_0, var_1, var_2 )
     wait(var_1);
     var_3 destroy();
     thread maps\favela_code::animated_sheet();
-    level._id_D13B.name = "Soap - Shadow Company"; //here
-    level._id_B8D7.name = "Ghost - Shadow Company"; //here
+    level._id_D13B.name = "Val. Makarov - Ultranationalist"; //here
+    level._id_B8D7.name = "Sgt. Yuri - Ultranationalist"; //here
 }
 
 _id_D1CD()
@@ -1518,19 +1520,19 @@ _id_C93F()
 {
     level._id_C904 = maps\_utility::spawn_targetname( "meat_spawner", 1 );
     level._id_C904 thread maps\_utility::magic_bullet_shield();
-    level._id_C904.name = "Meat - Shadow Company"; //here
+    level._id_C904.name = "Dim - Ultranationalist"; //here
     level._id_C904.animname = "meat";
     // level._id_C904 maps\favela_code::setheadmodel( "head_seal_soccom_c" ); //here
-    level._id_C904 maps\favela_code::setheadmodel( "head_shadow_co_c" ); //here
+    level._id_C904 maps\favela_code::setheadmodel( "head_airborne_d" ); //here
     // level._id_C904 setmodel( "body_seal_soccom_assault_d" ); //here
-    level._id_C904 setmodel( "body_shadow_co_assault" ); //here
+    level._id_C904 setmodel( "body_airborne_assault_a" ); //here
     
     if ( isdefined( level._id_C904.headmodel ) )
         level._id_C904 detach( level._id_C904.headmodel );
     // if ( isdefined( level._id_C904.headmodel ) )
     //     level._id_C904 detach( level._id_C904.headmodel );
 
-    level._id_C904 character\character_shadow_co_assault_dcemp::main(); //here
+    level._id_C904 character\character_spetsnaz_assault_c::main(); //here
     //level._id_C904 character\character_shadow_co_assault::main(); //here
     level._id_C904.ignoresuppression = 1;
     level._id_C904._id_909A = 1000;
@@ -1541,8 +1543,8 @@ _id_C93F()
 _id_BED2()
 {
     var_0 = getentarray( "fav_animated_chain", "targetname" );
-    level._id_D13B.name = "Soap - Shadow Company"; //here
-    level._id_B8D7.name = "Ghost - Shadow Company"; //here
+    level._id_D13B.name = "Val. Makarov - Ultranationalist"; //here
+    level._id_B8D7.name = "Sgt. Yuri - Ultranationalist"; //here
 
     foreach ( var_2 in var_0 )
     {
@@ -2126,15 +2128,15 @@ _id_C545()
 
 _id_CCAD()
 {
-    level._id_B8D7.name = "Ghost - Shadow Company"; // here
-    level._id_D13B.name = "Soap - Shadow Company"; //here
+    level._id_D13B.name = "Val. Makarov - Ultranationalist"; //here
+    level._id_B8D7.name = "Sgt. Yuri - Ultranationalist"; //here
     maps\_utility::trigger_wait( "ending_sequence", "targetname" );
     thread _id_C96B();
     thread maps\_utility::battlechatter_off( "allies" );
     thread maps\_utility::battlechatter_off( "axis" );
     var_0 = getent( "ending_node", "targetname" );
     var_1 = maps\_utility::spawn_targetname( "ending_soap_spawner", 1 );
-    var_1.name = "Soap - Shadow Company";
+    var_1.name = "Val. Makarov - Ultranationalist";
     var_1.animname = "mactavish";
     var_1 maps\_utility::set_ignoreme( 1 );
     var_1 maps\_utility::set_ignoreall( 1 );
@@ -2153,9 +2155,9 @@ _id_CCAD()
     var_3 useanimtree( level.scr_animtree["car"] );
     var_3.animname = "car";
     level._id_B8D7 = maps\_utility::spawn_targetname( "ending_ghost_spawner", 1 );
-    level._id_B8D7.name = "Ghost - Shadow Company"; //here
+    level._id_B8D7.name = "Sgt. Yuri - Ultranationalist"; //here
     level._id_B8D7.animname = "ghost"; //here
-    level._id_D13B.name = "Soap - Shadow Company"; //here
+    level._id_D13B.name = "Val. Makarov - Ultranationalist"; //here
     level._id_B8D7 maps\_utility::set_ignoreme( 1 );
     level._id_B8D7 maps\_utility::set_ignoreall( 1 );
     level._id_B8D7 thread maps\_utility::magic_bullet_shield();

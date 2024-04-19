@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "scar_h_thermal";
+    self.weapon = "ak47_digital_eotech";
 	character\character_spetsnaz_lmg_rnd::main();
 }
 
@@ -33,7 +33,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_lmg_rnd::precache();
-    precacheitem( "scar_h_thermal" );
+    precacheitem( "ak47_digital_eotech" );
     precacheitem( "beretta" );
     precacheitem( "fraggrenade" );
 }

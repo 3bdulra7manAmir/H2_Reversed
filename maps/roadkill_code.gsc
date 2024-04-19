@@ -235,6 +235,7 @@ _id_C80F()
     maps\_load::set_player_viewhand_model( "spetsnaz_vh" ); //here
     level.scr_model["player_rig"] = "spetsnaz_player_vh"; //here
     common_scripts\utility::flag_wait( "h2_intro_done" );
+    level.player GiveWeapon("dragunov");
     waittillframeend;
     level._id_B416 thread _id_B5F9( "shepherd_path" );
     thread _id_D372();

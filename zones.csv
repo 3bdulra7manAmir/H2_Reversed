@@ -19,7 +19,12 @@ game,spetsnaz_glock_weap
 game,force_recon
 game,af_trainers
 game,milita
-//game,vehicle_m1a1_abrams
+
+game,vehicle_m1a1_abrams
+game,vehicle_btr80
+game,vehicle_striker
+game,vehicle_bmp_winter
+
 game,rumbles
 
 game,tf141_arctic

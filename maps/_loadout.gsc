@@ -155,6 +155,33 @@ give_loadout()
     precacheitem("ak47_arctic_reflex");
     precacheitem("gl_ak47_arctic");
 
+    precachemodel("body_opforce_arab_lmg_a");
+    precachemodel("body_opforce_arab_smg_a");
+    precachemodel("body_opforce_arab_assault_a");
+    precachemodel("body_opforce_arab_unarmed_a_shadow");
+    precachemodel("head_opforce_arab_d_hat");
+    precachemodel("head_opforce_arab_e");
+    precachemodel("head_opforce_arab_c");
+    precachemodel("head_opforce_arab_b");
+    precachemodel("head_opforce_arab_a");
+    precachemodel("hat_opforce_arab_d");
+    precachemodel("body_opforce_arab_smg_a_hamed");
+    precachemodel("body_ally_arab_trn_assault_a");
+    precachemodel("body_ally_arab_trn_smg_a");
+    precachemodel("head_trn_arab_g");
+    precachemodel("head_trn_arab_f");
+    precachemodel("head_trn_arab_e");
+    precachemodel("head_trn_arab_d");
+    precachemodel("head_trn_arab_b");
+    precachemodel("head_trn_arab_c");
+    precachemodel("head_trn_arab_a");
+    precachemodel("body_force_c_woodland");
+    precachemodel("body_force_b_woodland");
+    precachemodel("body_force_assault_woodland");
+    precachemodel("head_force_c");
+    precachemodel("head_force_chad");
+    precachemodel("head_force_assault");
+
     precacheitem("aug_reflex_arctic");
     precacheitem("aug_scope_arctic");
 

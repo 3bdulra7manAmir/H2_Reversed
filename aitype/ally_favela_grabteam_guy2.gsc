@@ -22,7 +22,7 @@ main()
     }
 
     self.weapon = "deserteagle";
-	character\character_spetsnaz_smg_rnd::main();
+	character\character_milita_rnd::main();
 }
 
 spawner()
@@ -32,7 +32,7 @@ spawner()
 
 precache()
 {
-	character\character_spetsnaz_smg_rnd::precache();
+	character\character_milita_rnd::precache();
     precacheitem( "deserteagle" );
     precacheitem( "fraggrenade" );
 }

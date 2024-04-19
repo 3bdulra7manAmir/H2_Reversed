@@ -613,10 +613,10 @@ _id_B36A()
 _id_B5C0()
 {
     var_0 = _id_B6CC();
-    var_0 thread maps\_hud_util::_id_CC64( ::_id_BA61, "Shadow", "allies" ); //here
+    var_0 thread maps\_hud_util::_id_CC64( ::_id_BA61, "Boris Ryzhkov", "allies" ); //here
     // var_0 codescripts\character::setheadmodel( "h2_head_seal_soccom_e" );
     //here
-    var_0 character\character_shadow_co_assault::main();
+    var_0 character\character_spetsnaz_assault_c::main();
     var_0 linkto( self, "tag_driver" );
     thread maps\_anim::anim_single_solo( var_0, "drive_and_die", "tag_driver" );
 }
@@ -1439,6 +1439,8 @@ intro_player()
 {
     level endon( "exiting_vehicle" );
     self.animname = "player_rig";
+    level.scr_model["worldbody"] = "vb_us_army"; //here
+    level.player setViewmodel( "spetsnaz_vh" );
     maps\_anim::anim_single_solo( self, "intro", "tag_passenger" );
     wait(getanimlength( level.scr_anim["player_rig"]["intro"] ));
 }

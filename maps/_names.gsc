@@ -661,12 +661,12 @@ get_name_for_nationality( nationality )
 	
 	rank = randomint( 10 );
 	
-	if( nationality == "seal" || nationality == "taskforce" || nationality == "shadowcompany")
+	if( nationality == "seal" || nationality == "taskforce" || nationality == "shadowcompany" || nationality == "russian")
 	{
 		fullname = lastname;  // TF141 soldiers just get a callsign
 		self.airank = "private";
 	}
-	else if( nationality == "secretservice" || nationality == "shadowcompany")
+	else if( nationality == "secretservice" || nationality == "shadowcompany" || nationality == "russian")
 	{
 		fullname = "Agent " + lastname;  // Secret Service guys are all "Agents"
 		self.airank = "private";

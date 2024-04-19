@@ -8,7 +8,7 @@ main()
     var_0[2] = "head_trn_arab_e";
     var_0[3] = "head_trn_arab_d";
     var_0[4] = "head_trn_arab_c";
-    var_0[4] = "head_trn_arab_b";
-    var_0[4] = "head_trn_arab_a";
+    var_0[5] = "head_trn_arab_b";
+    var_0[6] = "head_trn_arab_a";
     return var_0;
 }
