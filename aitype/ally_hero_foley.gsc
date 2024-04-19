@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "scar_h_grenadier";
+    self.weapon = "ak47_digital_eotech";
 	character\character_vil_makarov::main();
 }
 
@@ -33,8 +33,8 @@ spawner()
 precache()
 {
 	character\character_vil_makarov::precache();
-    precacheitem( "scar_h_grenadier" );
-    precacheitem( "scar_h_m203" );
+    precacheitem( "ak47_digital_eotech" );
+    //precacheitem( "scar_h_m203" );
     precacheitem( "beretta" );
     precacheitem( "fraggrenade" );
 }

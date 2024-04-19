@@ -24,7 +24,7 @@ main()
     switch( codescripts\character::get_random_weapon(2) )
     {
         case 0:
-            self.weapon = "spas12";
+            self.weapon = "aa12_reflex";
             break;
         case 1:
             self.weapon = "spas12_reflex";
@@ -42,7 +42,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_shotgun_rnd::precache();
-    precacheitem( "spas12" );
+    precacheitem( "aa12_reflex" );
     precacheitem( "spas12_reflex" );
     precacheitem( "glock" );
     precacheitem( "fraggrenade" );

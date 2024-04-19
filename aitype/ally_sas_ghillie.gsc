@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "m14_scoped";
+    self.weapon = "cheytac_silencer";
     if (level.script == "estate"){
         character\character_shadow_co_smg::main();
     }
@@ -40,7 +40,7 @@ precache()
 {
 	character\character_shadow_co_smg::precache();
 	character\character_spetsnaz_sniper::precache();
-    precacheitem( "m14_scoped" );
+    precacheitem( "cheytac_silencer" );
     precacheitem( "usp_silencer" );
     precacheitem( "usp_silencer" );
     precacheitem( "fraggrenade" );

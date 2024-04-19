@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "m4_grunt";
+    self.weapon = "scar_h_thermal";
 
     switch( codescripts\character::get_random_character(3) )
     {
@@ -48,7 +48,7 @@ precache()
 	character\character_spetsnaz_arctic_smg_rnd::precache();
 	character\character_spetsnaz_arctic_lmg_rnd::precache();
     precacheitem( "m4_grenadier" );
-    precacheitem( "m4_grunt" );
+    precacheitem( "scar_h_thermal" );
     precacheitem( "usp" );
     precacheitem( "usp" );
     precacheitem( "fraggrenade" );

@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 512.0, 1024.0 );
     }
 
-    self.weapon = "m4_grunt";
+    self.weapon = "p90_eotech";
     if ( level.script == "roadkill" || level.script == "trainer" || level.script == "estate")
 	{
         character\character_vil_zakh::main();
@@ -41,7 +41,7 @@ precache()
 {
     character\character_vil_zakh::precache();
     character\character_vil_shepherd_museum::precache();
-    precacheitem( "m4_grunt" );
+    precacheitem( "p90_eotech" );
     precacheitem( "coltanaconda" );
     precacheitem( "coltanaconda" );
     precacheitem( "fraggrenade" );

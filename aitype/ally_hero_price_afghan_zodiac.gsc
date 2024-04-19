@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "m4_grenadier";
+    self.weapon = "fal_acog";
 	character\character_vil_zakh::main();
 }
 
@@ -33,8 +33,8 @@ spawner()
 precache()
 {
 	character\character_vil_zakh::precache();
-    precacheitem( "m4_grenadier" );
-    precacheitem( "m203_m4" );
+    precacheitem( "fal_acog" );
+    //precacheitem( "m203_m4" );
     precacheitem( "usp_silencer" );
     precacheitem( "usp_silencer" );
     precacheitem( "fraggrenade" );

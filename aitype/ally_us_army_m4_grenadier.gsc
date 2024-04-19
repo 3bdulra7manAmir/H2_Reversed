@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "m4_grenadier";
+    self.weapon = "ak47_reflex";
 	character\character_spetsnaz_assault_rnd::main();
 
     
@@ -35,7 +35,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_assault_rnd::precache();
-    precacheitem( "m4_grenadier" );
+    precacheitem( "ak47_reflex" );
     precacheitem( "m203_m4" );
     precacheitem( "beretta" );
     precacheitem( "fraggrenade" );

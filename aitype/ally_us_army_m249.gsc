@@ -24,7 +24,7 @@ main()
     switch( codescripts\character::get_random_weapon(3) )
     {
         case 0:
-            self.weapon = "m240";
+            self.weapon = "rpd_digital_acog";
             break;
         case 1:
             self.weapon = "m240_acog";
@@ -45,7 +45,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_lmg_rnd::precache();
-    precacheitem( "m240" );
+    precacheitem( "rpd_digital_acog" );
     precacheitem( "m240_acog" );
     precacheitem( "m240_reflex" );
     precacheitem( "beretta" );

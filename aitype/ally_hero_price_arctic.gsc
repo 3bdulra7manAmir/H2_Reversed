@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "m21_scoped_arctic_silenced";
+    self.weapon = "cheytac_silencer";
 	character\character_vil_zakh_winter::main();
 }
 
@@ -33,7 +33,7 @@ spawner()
 precache()
 {
 	character\character_vil_zakh_winter::precache();
-    precacheitem( "m21_scoped_arctic_silenced" );
+    precacheitem( "cheytac_silencer" );
     precacheitem( "at4" );
     precacheitem( "usp_silencer" );
     precacheitem( "fraggrenade" );

@@ -28,7 +28,7 @@ main()
 		self setEngagementMaxDist( 768.000000, 1024.000000 );
 	}
 
-	self.weapon = "mp5";
+	self.weapon = "tavor_reflex";
 
 	switch( codescripts\character::get_random_character(2) )
 	{
@@ -50,7 +50,7 @@ precache()
 {
 	character\character_spetsnaz_arctic_assault_rnd::precache();
 	character\character_spetsnaz_arctic_smg_rnd::precache();
-	precacheItem("mp5");
+	precacheItem("tavor_reflex");
 	precacheItem("beretta");
 	precacheItem("fraggrenade");
 }

@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "m4_grunt";
+    self.weapon = "tavor_digital_eotech";
 	character\character_spetsnaz_assault_rnd::main();
 }
 
@@ -33,7 +33,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_assault_rnd::precache();
-    precacheitem( "m4_grunt" );
+    precacheitem( "tavor_digital_eotech" );
     precacheitem( "glock" );
     precacheitem( "fraggrenade" );
 }

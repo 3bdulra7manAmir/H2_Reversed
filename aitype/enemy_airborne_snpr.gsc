@@ -28,7 +28,7 @@ main()
 		self setEngagementMaxDist( 1600.000000, 2400.000000 );
 	}
 
-	self.weapon = "dragunov";
+	self.weapon = "cheytac_silencer";
 
 	character\character_us_army_assault_rnd::main();
 }
@@ -42,7 +42,7 @@ precache()
 {
 	character\character_us_army_assault_rnd::precache();
 
-	precacheItem("dragunov");
+	precacheItem("cheytac_silencer");
 	precacheItem("pp2000");
 	precacheItem("fraggrenade");
 

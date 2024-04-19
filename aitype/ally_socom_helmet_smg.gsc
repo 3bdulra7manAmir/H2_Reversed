@@ -24,7 +24,7 @@ main()
     switch( codescripts\character::get_random_weapon(5) )
     {
         case 0:
-            self.weapon = "mp5";
+            self.weapon = "tmp_reflex";
             break;
         case 1:
             self.weapon = "mp5_reflex";
@@ -51,7 +51,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_smg_rnd::precache();
-    precacheitem( "mp5" );
+    precacheitem( "tmp_reflex" );
     precacheitem( "mp5_reflex" );
     precacheitem( "ump45" );
     precacheitem( "ump45_acog" );

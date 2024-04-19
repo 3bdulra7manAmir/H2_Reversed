@@ -31,22 +31,22 @@ main()
 	switch( codescripts\character::get_random_weapon(6) )
 	{
 	case 0:
-		self.weapon = "rpd";
+		self.weapon = "scar_h_reflex";
 		break;
 	case 1:
-		self.weapon = "rpd_reflex";
+		self.weapon = "scar_h_shotgun";
 		break;
 	case 2:
-		self.weapon = "rpd_acog";
+		self.weapon = "scar_h_acog";
 		break;
 	case 3:
-		self.weapon = "rpd_digital";
+		self.weapon = "scar_h";
 		break;
 	case 4:
-		self.weapon = "rpd_digital_acog";
+		self.weapon = "m4_grunt";
 		break;
 	case 5:
-		self.weapon = "rpd_digital_reflex";
+		self.weapon = "mp5";
 		break;
 	}
 
@@ -61,12 +61,12 @@ spawner()
 precache()
 {
 	character\character_us_army_assault_lmg::precache();
-	precacheItem("rpd");
-	precacheItem("rpd_reflex");
-	precacheItem("rpd_acog");
-	precacheItem("rpd_digital");
-	precacheItem("rpd_digital_acog");
-	precacheItem("rpd_digital_reflex");
-	precacheItem("pp2000");
+	precacheItem("scar_h_reflex");
+	precacheItem("scar_h_shotgun");
+	precacheItem("scar_h_acog");
+	precacheItem("scar_h");
+	precacheItem("m4_grunt");
+	//precacheItem("rpd_digital_reflex");
+	//precacheItem("pp2000");
 	precacheItem("fraggrenade");
 }

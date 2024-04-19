@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "mp5";
+    self.weapon = "p90_acog";
 	character\character_spetsnaz_smg_rnd::main();
 }
 
@@ -33,7 +33,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_smg_rnd::precache();
-    precacheitem( "mp5" );
+    precacheitem( "p90_acog" );
     precacheitem( "beretta" );
     precacheitem( "fraggrenade" );
 }

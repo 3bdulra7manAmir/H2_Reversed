@@ -28,7 +28,7 @@ main()
 		self setEngagementMaxDist( 768.000000, 1024.000000 );
 	}
 
-	self.weapon = "ak47";
+	self.weapon = "scar_h_reflex";
 	character\character_us_army_assault_rnd::main();
 }
 
@@ -40,7 +40,7 @@ spawner()
 precache()
 {
 	character\character_us_army_assault_rnd::precache();
-	precacheItem("ak47");
+	precacheItem("scar_h_reflex");
 	precacheItem("pp2000");
 	precacheItem("fraggrenade");
 }

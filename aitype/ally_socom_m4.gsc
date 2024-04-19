@@ -24,7 +24,7 @@ main()
     switch( codescripts\character::get_random_weapon(2) )
     {
         case 0:
-            self.weapon = "m4_grenadier";
+            self.weapon = "m16_acog";
             break;
         case 1:
             self.weapon = "m4_grunt";
@@ -42,8 +42,8 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_assault_rnd::precache();
-    precacheitem( "m4_grenadier" );
-    precacheitem( "m203_m4" );
+    precacheitem( "m16_acog" );
+    //precacheitem( "m203_m4" );
     precacheitem( "m4_grunt" );
     precacheitem( "glock" );
     precacheitem( "fraggrenade" );

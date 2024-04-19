@@ -32,7 +32,8 @@ give_loadout()
 
     maps\_loadout_code::loadout( "favela", "ump45_digital_acog", "m1014", "fraggrenade", "flash_grenade", "spetsnaz_vh", "taskforce" );
 
-    maps\_loadout_code::loadout( "invasion", "rpd_acog", "striker_reflex", "fraggrenade", "smoke_grenade_american", "spetsnaz_vh", "american" );
+    //maps\_loadout_code::loadout( "invasion", "rpd_acog", "striker_reflex", "fraggrenade", "smoke_grenade_american", "spetsnaz_vh", "american" );
+    maps\_loadout_code::loadout( "invasion", "scar_h_reflex_shotgun", "striker_reflex", "fraggrenade", "smoke_grenade_american", "spetsnaz_vh", "american" );
 
     maps\_loadout_code::loadout( "favela_escape", "p90_eotech", "glock", "fraggrenade", "flash_grenade", "spetsnaz_vh", "taskforce" );
 

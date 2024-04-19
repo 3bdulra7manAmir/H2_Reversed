@@ -24,16 +24,16 @@ main()
     switch( codescripts\character::get_random_weapon(4) )
     {
         case 0:
-            self.weapon = "scar_h_acog";
+            self.weapon = "tavor_digital_acog";
             break;
         case 1:
-            self.weapon = "scar_h_reflex";
+            self.weapon = "tavor_digital_eotech";
             break;
         case 2:
-            self.weapon = "scar_h_shotgun";
+            self.weapon = "m16_acog";
             break;
         case 3:
-            self.weapon = "scar_h_grenadier";
+            self.weapon = "fal_acog";
             break;
     }
 
@@ -48,12 +48,12 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_assault_rnd::precache();
-    precacheitem( "scar_h_acog" );
-    precacheitem( "scar_h_reflex" );
-    precacheitem( "scar_h_shotgun" );
-    precacheitem( "scar_h_shotgun_attach" );
-    precacheitem( "scar_h_grenadier" );
-    precacheitem( "scar_h_m203" );
+    precacheitem( "tavor_digital_acog" );
+    precacheitem( "tavor_digital_eotech" );
+    precacheitem( "m16_acog" );
+    precacheitem( "fal_acog" );
+    //precacheitem( "scar_h_grenadier" );
+    //precacheitem( "scar_h_m203" );
     precacheitem( "beretta" );
     precacheitem( "fraggrenade" );
 }

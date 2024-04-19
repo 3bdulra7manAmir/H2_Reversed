@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "masada_acog";
+    self.weapon = "famas_arctic_reflex";
 	character\character_spetsnaz_assault_rnd::main();
 }
 
@@ -33,7 +33,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_assault_rnd::precache();
-    precacheitem( "masada_acog" );
+    precacheitem( "famas_arctic_reflex" );
     precacheitem( "beretta" );
     precacheitem( "fraggrenade" );
 }

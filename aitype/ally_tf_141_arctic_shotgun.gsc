@@ -24,7 +24,7 @@ main()
     switch( codescripts\character::get_random_weapon(2) )
     {
         case 0:
-            self.weapon = "winchester1200";
+            self.weapon = "spas12_arctic";
             break;
         case 1:
             self.weapon = "m1014";
@@ -42,7 +42,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_shotgun_rnd::precache();
-    precacheitem( "winchester1200" );
+    precacheitem( "spas12_arctic" );
     precacheitem( "m1014" );
     precacheitem( "beretta" );
     precacheitem( "fraggrenade" );

@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "m4_grunt";
+    self.weapon = "m16_acog";
 	character\character_spetsnaz_assault_rnd::main();
 }
 
@@ -33,7 +33,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_assault_rnd::precache();
-    precacheitem( "m4_grunt" );
+    precacheitem( "m16_acog" );
     precacheitem( "glock" );
     precacheitem( "fraggrenade" );
 }

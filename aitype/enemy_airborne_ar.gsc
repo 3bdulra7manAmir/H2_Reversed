@@ -31,40 +31,40 @@ main()
 	switch( codescripts\character::get_random_weapon(12) )
 	{
 	case 0:
-		self.weapon = "ak47";
+		self.weapon = "scar_h_reflex";
 		break;
 	case 1:
-		self.weapon = "ak47_digital_reflex";
+		self.weapon = "scar_h_shotgun";
 		break;
 	case 2:
-		self.weapon = "ak47_digital_grenadier";
+		self.weapon = "scar_h_acog";
 		break;
 	case 3:
-		self.weapon = "ak47_digital_acog";
+		self.weapon = "scar_h";
 		break;
 	case 4:
-		self.weapon = "fal_acog";
+		self.weapon = "m4_grunt";
 		break;
 	case 5:
-		self.weapon = "fal_shotgun";
+		self.weapon = "mp5";
 		break;
 	case 6:
-		self.weapon = "tavor_digital_acog";
+		self.weapon = "kriss_reflex";
 		break;
 	case 7:
-		self.weapon = "tavor_mars";
+		self.weapon = "m16_acog";
 		break;
 	case 8:
-		self.weapon = "tavor_digital_eotech";
+		self.weapon = "m16_basic";
 		break;
 	case 9:
-		self.weapon = "tavor_reflex";
+		self.weapon = "scar_h_thermal";
 		break;
 	case 10:
-		self.weapon = "ak47_shotgun";
+		self.weapon = "kriss";
 		break;
 	case 11:
-		self.weapon = "ak47_digital_eotech";
+		self.weapon = "m16_grenadier";
 		break;
 	}
 
@@ -79,21 +79,21 @@ spawner()
 precache()
 {
 	character\character_us_army_assault_rnd::precache();
-	precacheItem("ak47");
-	precacheItem("ak47_digital_reflex");
-	precacheItem("ak47_digital_grenadier");
-	precacheItem("gl_ak47_digital");
-	precacheItem("ak47_digital_acog");
-	precacheItem("fal_acog");
-	precacheItem("fal_shotgun");
-	precacheItem("fal_shotgun_attach");
-	precacheItem("tavor_digital_acog");
-	precacheItem("tavor_mars");
-	precacheItem("tavor_digital_eotech");
-	precacheItem("tavor_reflex");
-	precacheItem("ak47_shotgun");
-	precacheItem("ak47_shotgun_attach");
-	precacheItem("ak47_digital_eotech");
-	precacheItem("pp2000");
+	precacheItem("scar_h_reflex");
+	precacheItem("scar_h_shotgun");
+	precacheItem("scar_h_acog");
+	precacheItem("scar_h");
+	precacheItem("m4_grunt");
+	precacheItem("mp5");
+	precacheItem("kriss_reflex");
+	precacheItem("m16_acog");
+	precacheItem("m16_basic");
+	precacheItem("scar_h_thermal");
+	precacheItem("kriss");
+	precacheItem("m16_grenadier");
+	//precacheItem("ak47_shotgun");
+	//precacheItem("ak47_shotgun_attach");
+	//precacheItem("ak47_digital_eotech");
+	//precacheItem("pp2000");
 	precacheItem("fraggrenade");
 }

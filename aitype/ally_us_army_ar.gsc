@@ -27,37 +27,37 @@ main()
             self.weapon = "m16_basic";
             break;
         case 1:
-            self.weapon = "m240";
+            self.weapon = "ak47_digital_acog";
             break;
         case 2:
-            self.weapon = "m16_grenadier";
+            self.weapon = "ak47_digital_eotech";
             break;
         case 3:
-            self.weapon = "m240_reflex";
+            self.weapon = "ak47_digital_grenadier";
             break;
         case 4:
             self.weapon = "m16_acog";
             break;
         case 5:
-            self.weapon = "m240_acog";
+            self.weapon = "ak47_digital_reflex";
             break;
         case 6:
-            self.weapon = "m4_grenadier";
+            self.weapon = "ak47_reflex";
             break;
         case 7:
-            self.weapon = "scar_h_acog";
+            self.weapon = "ak47_shotgun";
             break;
         case 8:
-            self.weapon = "m4_grunt";
+            self.weapon = "kriss";
             break;
         case 9:
-            self.weapon = "scar_h_shotgun";
+            self.weapon = "fal_acog";
             break;
         case 10:
             self.weapon = "scar_h_reflex";
             break;
         case 11:
-            self.weapon = "scar_h_grenadier";
+            self.weapon = "fal_shotgun";
             break;
     }
 
@@ -73,21 +73,21 @@ precache()
 {
 	character\character_spetsnaz_assault_rnd::precache();
     precacheitem( "m16_basic" );
-    precacheitem( "m240" );
-    precacheitem( "m16_grenadier" );
-    precacheitem( "m203_m16" );
-    precacheitem( "m240_reflex" );
+    precacheitem( "ak47" );
+    precacheitem( "ak47_digital_acog" );
+    precacheitem( "ak47_digital_eotech" );
+    precacheitem( "ak47_digital_grenadier" );
     precacheitem( "m16_acog" );
-    precacheitem( "m240_acog" );
-    precacheitem( "m4_grenadier" );
-    precacheitem( "m203_m4" );
-    precacheitem( "scar_h_acog" );
-    precacheitem( "m4_grunt" );
-    precacheitem( "scar_h_shotgun" );
-    precacheitem( "scar_h_shotgun_attach" );
+    precacheitem( "ak47_digital_reflex" );
+    precacheitem( "ak47_reflex" );
+    precacheitem( "ak47_shotgun" );
+    precacheitem( "fal_acog" );
+    precacheitem( "kriss" );
+    //precacheitem( "scar_h_shotgun" );
+    //precacheitem( "scar_h_shotgun_attach" );
     precacheitem( "scar_h_reflex" );
-    precacheitem( "scar_h_grenadier" );
-    precacheitem( "scar_h_m203" );
+    //precacheitem( "scar_h_grenadier" );
+    //precacheitem( "scar_h_m203" );
     precacheitem( "beretta" );
     precacheitem( "fraggrenade" );
 }

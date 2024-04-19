@@ -21,7 +21,7 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "mg4";
+    self.weapon = "rpd_digital_acog";
 	character\character_spetsnaz_lmg_rnd::main();
 }
 
@@ -33,7 +33,7 @@ spawner()
 precache()
 {
 	character\character_spetsnaz_lmg_rnd::precache();
-    precacheitem( "mg4" );
+    precacheitem( "rpd_digital_acog" );
     precacheitem( "beretta" );
     precacheitem( "fraggrenade" );
 }
