@@ -91,7 +91,7 @@ pre_load()
     level._id_C830[12] = "weapon_saw_clip";
     level._id_C830[13] = "weapon_famas_clip";
     level._id_B8AB = "viewbody_tf141_arctic"; //here
-    level.scr_model["worldbody"] = "viewbody_tf141_arctic";
+    //level.scr_model["worldbody"] = "viewbody_tf141_arctic";
     _id_AAAB::main();
     maps\_drone_civilian::init();
     vehicle_scripts\_attack_heli::preload();
@@ -1156,14 +1156,14 @@ _id_AF6A()
     thread _id_CBFA();
     common_scripts\utility::flag_set( "obj_stealthkill_complete" );
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
 _id_BAB7()
 {
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     level endon( "player_starting_stealth_kill" );
     var_0 = undefined;
@@ -1193,7 +1193,7 @@ _id_BAB7()
 _id_B831()
 {
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     level endon( "player_starting_stealth_kill" );
     var_0 = &"SCRIPT_PLATFORM_OILRIG_HINT_STEALTH_KILL";
@@ -1262,7 +1262,7 @@ _id_CBFA()
 
     thread _id_B916();
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
@@ -1277,14 +1277,14 @@ _id_B916()
     level.player thread common_scripts\utility::play_sound_in_space( "splash_player_water_enter" );
     thread _id_CBFA();
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
 _id_C4F5()
 {
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     common_scripts\utility::flag_wait( "player_starting_stealth_kill" );
     wait 2.8;
@@ -1362,7 +1362,7 @@ _id_ADBE()
     var_1 thread _id_BA48();
     var_5 delete();
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
@@ -1418,7 +1418,7 @@ _id_C0BF()
     common_scripts\utility::flag_wait( "lower_room_breached" );
     var_1 thread _id_BA48();
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
@@ -1976,7 +1976,7 @@ _id_B1B0()
     var_0 notify( "stop soundoilrig_muffled_2nd_breach_voices" );
     thread _id_D510( var_0, 200 );
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
@@ -2014,7 +2014,7 @@ _id_C39C()
     var_0 waittill( "reached_dynamic_path_end" );
     var_0 delete();
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
@@ -2059,7 +2059,7 @@ _id_C37E()
     var_1 = getentarray( "ambush_damage_triggers", "targetname" );
     common_scripts\utility::array_thread( var_1, ::_id_C064 );
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
 }
 
@@ -2996,7 +2996,7 @@ _id_CB17()
 _id_D164()
 {
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     common_scripts\utility::flag_wait( "player_at_deck1_midpoint" );
     maps\_utility::battlechatter_off( "allies" );
@@ -3021,7 +3021,7 @@ _id_D164()
 _id_AFA1()
 {
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     common_scripts\utility::flag_wait( "player_at_stairs_to_deck_2" );
     var_0 = maps\_vehicle::spawn_vehicles_from_targetname_and_drive( "zodiacs_evac" );
@@ -3256,7 +3256,7 @@ _id_C671()
 _id_CF56()
 {
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     common_scripts\utility::flag_wait( "player_at_stairs_to_top_deck" );
     var_0 = getentarray( "breach_save_deck3", "targetname" );
@@ -3266,7 +3266,7 @@ _id_CF56()
 _id_A804()
 {
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     level endon( "breach_deck3_autosave_threaded" );
     level endon( "A door in breach group 300 has been activated." );
@@ -3922,7 +3922,7 @@ handle_soap_headtracking()
 handleghostmovement( var_0 )
 {
     level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
-    level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+    level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
     level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
     level._id_C280.animname = "generic";
     var_0 maps\_anim::anim_reach_solo( level._id_C280, "escape_in" );
@@ -4814,7 +4814,7 @@ _id_B351( var_0, var_1, var_2 )
         level._id_AC03 = maps\_utility::spawn_script_noteworthy( "price" );
         level._id_AC03.name = "Pvt. Yuri - Ultranationalist"; //here
         level._id_AC03.animname = "soap";
-        level._id_C280.name = "Pvt. Tak - Ultranationalist"; //here
+        level._id_C280.name = "Sgt. Ivan Afanasyev - Ultranationalist"; //here
         level._id_BBBD.name = "Pvt. Tak - Ultranationalist"; //here
         level._id_C280 = maps\_utility::spawn_script_noteworthy( "friendly02" );
         level._id_BBBD = maps\_utility::spawn_script_noteworthy( "friendly03" );
@@ -5984,7 +5984,7 @@ replacemodelforwetallies()
         case "head_seal_udt_d_lifesaver":
         case "head_hero_soap_udt":
         case "head_hero_ghost_udt":
-            codescripts\character::setheadmodel( self.headmodel + "_wet" );
+            //codescripts\character::setheadmodel( self.headmodel + "_wet" );
             break;
         default:
             break;
@@ -5997,7 +5997,7 @@ replacemodelforwetallies()
         case "body_seal_udt_assault_a":
         case "body_hero_seal_udt_soap":
         case "body_hero_seal_udt_ghost":
-            self setmodel( self.model + "_wet" );
+            //self setmodel( self.model + "_wet" );
             break;
         default:
             break;
@@ -6021,7 +6021,7 @@ replacemodelforwetplayer()
     level.scr_model["player_rig"] = "spetsnaz_arctic_vh";
     level.player setviewmodel( "spetsnaz_arctic_vh" );
     level.scr_model["h2_active_breacher_rig"] = "viewbody_tf141_arctic";
-    level.scr_model["worldbody"] = "viewbody_tf141_arctic";
+    //level.scr_model["worldbody"] = "viewbody_tf141_arctic";
 }
 
 soap_stairs_anim()

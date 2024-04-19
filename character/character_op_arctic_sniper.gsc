@@ -5,6 +5,7 @@ main()
 	self attach("head_op_arctic_sniper", "", true);
 	self.headModel = "head_op_arctic_sniper";
 	self.voice = "russian";
+	self setclothtype( "vestlight" );
 }
 
 precache()

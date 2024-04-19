@@ -14,7 +14,7 @@ main()
             character\character_spetsnaz_shotgun_c::main();
             break;
     }
-	self.voice = "british";
+	self.voice = "russian";
     self setclothtype( "vestlight" );
 }
 

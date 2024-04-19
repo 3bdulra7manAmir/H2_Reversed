@@ -14,7 +14,7 @@ main()
             character\character_sp_usmc_force_c::main();
             break;
     }
-	self.voice = "american";
+	self.voice = "british";
     self setclothtype( "vestlight" );
 }
 

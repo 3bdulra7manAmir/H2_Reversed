@@ -17,8 +17,12 @@ game,spetsnaz_red_weap_two_sil
 game,spetsnaz_glock_weap
 
 game,force_recon
+game,af_trainers
+game,milita
+//game,vehicle_m1a1_abrams
 game,rumbles
 
 game,tf141_arctic
 game,tf141_arctic_player_vh
+game,sc_vh
 game,vb_us_army

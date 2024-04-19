@@ -20,7 +20,7 @@ main()
             character\character_merc_e::main();
             break;
     }
-	self.voice = "american";
+	self.voice = "russian";
     self setclothtype( "vestlight" );
 }
 

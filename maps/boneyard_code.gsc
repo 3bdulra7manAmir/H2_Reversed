@@ -798,7 +798,7 @@ _id_BA8A()
     var_9 linkto( var_0 );
     var_9.origin = var_8.origin;
     var_9 maps\_utility::assign_animtree( "nikolai" );
-    var_9 character\character_shadow_co_assault_dcemp::main(); //here
+    var_9 character\character_spetsnaz_assault_b::main(); //here
 
     var_8 thread maps\_anim::anim_loop_solo( var_9, "nikolai_idle" );
     common_scripts\utility::array_call( getentarray( var_0.target, "targetname" ), ::linkto, var_0 );

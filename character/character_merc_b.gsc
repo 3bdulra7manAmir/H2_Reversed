@@ -5,7 +5,7 @@ main()
 {
     codescripts\character::setModelFromArray(xmodelalias\alias_merc_bodies::main());
     codescripts\character::attachHead( "alias_merc_heads", xmodelalias\alias_merc_heads::main() );
-    self.voice = "american";
+    self.voice = "russian";
     self setclothtype( "vestlight" );
 }
 

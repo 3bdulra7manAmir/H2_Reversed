@@ -4,7 +4,7 @@ main()
 	self setModel("body_force_assault_woodland");
 	self attach("head_force_c", "", true);
 	self.headModel = "head_force_c";
-	self.voice = "american";
+	self.voice = "british";
 }
 
 precache()

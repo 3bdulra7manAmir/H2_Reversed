@@ -15,6 +15,8 @@ main()
     _id_AD72();
     _id_AB17();
     maps\_vehicle::_id_CCF4( "script_vehicle_uaz_hardtop_physics", _id_C782::setanims, ::_id_BCD0 );
+    maps\_load::set_player_viewhand_model( "viewhands_shadow_co" ); //here
+    level.scr_model["player_rig"] = "viewhands_shadow_co"; //here
 }
 #using_animtree("generic_human");
 
@@ -57,6 +59,8 @@ _id_C40F()
 
 breach_anims()
 {
+    //level.scr_model["playerview"] = "spetsnaz_player_vh"; //here //here neeeeeeeeeeeeeeeeew
+    level.scr_model["playerview"] = "viewhands_shadow_co"; //here //here neeeeeeeeeeeeeeeeew
     level.scr_anim["generic"]["exposed_idle_reactA"] = %exposed_idle_reacta;
     level.scr_anim["generic"]["favela_chaotic_cornerR_med90"] = %favela_chaotic_cornerr_med90;
     level.scr_anim["generic"]["favela_chaotic_cornerCrL_fire_mid"] = %favela_chaotic_cornercrl_fire_mid;
@@ -321,6 +325,8 @@ _id_CD92()
 
 _id_BB63()
 {
+    //level.scr_model["playerview"] = "spetsnaz_player_vh"; //here //here neeeeeeeeeeeeeeeeew
+    level.scr_model["playerview"] = "viewhands_shadow_co"; //here //here neeeeeeeeeeeeeeeeew
     level.scr_anim["breach_door_model_estate"]["breach"] = %breach_player_door_v2;
     level.scr_animtree["breach_door_model_estate"] = #animtree;
     level.scr_model["breach_door_model_estate"] = "h2_est_com_door_02";
@@ -333,7 +339,8 @@ _id_BB63()
 _id_C659()
 {
     level.scr_animtree["playerview"] = #animtree;
-    level.scr_model["playerview"] = "spetsnaz_player_vh"; //here
+    //level.scr_model["playerview"] = "spetsnaz_player_vh"; //here //here neeeeeeeeeeeeeeeeew
+    level.scr_model["playerview"] = "viewhands_shadow_co"; //here //here neeeeeeeeeeeeeeeeew
     level.scr_animtree["worldbody"] = #animtree;
     level.scr_model["worldbody"] = "vb_us_army"; //here
     level.scr_anim["worldbody"]["estate_ending_drag"] = %h2_estate_drag_player;

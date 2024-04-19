@@ -41,15 +41,7 @@ main()
 		break;
 	}
 
-	switch( codescripts\character::get_random_character(2) )
-	{
-	case 0:
-		character\character_opforce_merc_shotgun_a::main();
-		break;
-	case 1:
-		character\character_opforce_merc_shotgun_b::main();
-		break;
-	}
+	character\character_merc_rnd::main();
 }
 
 spawner()
@@ -59,9 +51,7 @@ spawner()
 
 precache()
 {
-	character\character_opforce_merc_shotgun_a::precache();
-	character\character_opforce_merc_shotgun_b::precache();
-
+	character\character_merc_rnd::precache();
 	precacheItem("striker_woodland");
 	precacheItem("striker_woodland_reflex");
 	precacheItem("pp2000");

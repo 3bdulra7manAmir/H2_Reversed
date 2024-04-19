@@ -26,13 +26,13 @@ main()
     switch( codescripts\character::get_random_character(3) )
     {
         case 0:
-	        character\character_spetsnaz_assault_rnd::main();
+	        character\character_spetsnaz_arctic_assault_rnd::main();
             break;
         case 1:
-	        character\character_spetsnaz_smg_rnd::main();
+	        character\character_spetsnaz_arctic_smg_rnd::main();
             break;
         case 2:
-	        character\character_spetsnaz_lmg_rnd::main();
+	        character\character_spetsnaz_arctic_lmg_rnd::main();
             break;
     }
 }
@@ -44,9 +44,9 @@ spawner()
 
 precache()
 {
-	character\character_spetsnaz_assault_rnd::precache();
-	character\character_spetsnaz_smg_rnd::precache();
-	character\character_spetsnaz_lmg_rnd::precache();
+	character\character_spetsnaz_arctic_assault_rnd::precache();
+	character\character_spetsnaz_arctic_smg_rnd::precache();
+	character\character_spetsnaz_arctic_lmg_rnd::precache();
     precacheitem( "m4_grenadier" );
     precacheitem( "m4_grunt" );
     precacheitem( "usp" );

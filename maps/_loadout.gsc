@@ -50,7 +50,7 @@ give_loadout()
 
     maps\_loadout_code::loadout( "dc_whitehouse", "m4m203_eotech", "beretta", "fraggrenade", "flash_grenade", "spetsnaz_vh", "american" );
 
-    maps\_loadout_code::loadout( "estate", "masada_digital_grenadier_eotech", "cheytac_silencer_desert", "fraggrenade", "flash_grenade", "viewmodel_base_viewhands", "british" );
+    maps\_loadout_code::loadout( "estate", "masada_digital_grenadier_eotech", "cheytac_silencer_desert", "fraggrenade", "flash_grenade", "viewhands_shadow_co", "british" );
 
     maps\_loadout_code::loadout( "boneyard", "m14_scoped_silencer", "rpd_digital_reflex", "fraggrenade", "flash_grenade", "spetsnaz_vh", "american" );
 
@@ -142,6 +142,9 @@ give_loadout()
 
     precachemodel("spetsnaz_arctic_vh");
     precachemodel("tf141_arctic_player_vh"); //here working
+    precachemodel("viewhands_shadow_co");
+    
+    //precachemodel("vehicle_m1a1_abrams");
 
     precachemodel("viewbody_tf141_arctic");
     precachemodel("vb_us_army");

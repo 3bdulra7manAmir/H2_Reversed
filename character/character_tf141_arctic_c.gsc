@@ -5,7 +5,7 @@ main()
 {
     codescripts\character::setModelFromArray(xmodelalias\alias_tf141_arctic_bodies::main());
     codescripts\character::attachHead( "alias_tf141_arctic_heads", xmodelalias\alias_us_army_heads::main() );
-    self.voice = "american";
+    self.voice = "taskforce";
     self setclothtype( "vestlight" );
 }
 

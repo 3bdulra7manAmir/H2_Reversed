@@ -20,7 +20,7 @@ main()
             character\character_tf141_arctic_e::main();
             break;
     }
-	self.voice = "american";
+	self.voice = "taskforce";
     self setclothtype( "vestlight" );
 }
 
