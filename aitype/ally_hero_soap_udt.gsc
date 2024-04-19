@@ -22,7 +22,7 @@ main()
     }
 
     self.weapon = "mp5_silencer_reflex";
-	character\character_spetsnaz_assault_rnd::main();
+	character\character_vil_makarov::main();
 }
 
 spawner()
@@ -32,7 +32,7 @@ spawner()
 
 precache()
 {
-	character\character_spetsnaz_assault_rnd::precache();
+	character\character_vil_makarov::precache();
     precacheitem( "mp5_silencer_reflex" );
     precacheitem( "glock" );
     precacheitem( "fraggrenade" );
