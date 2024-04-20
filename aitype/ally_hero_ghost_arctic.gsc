@@ -22,7 +22,7 @@ main()
     }
 
     self.weapon = "famas_arctic_reflex";
-	character\character_spetsnaz_assault_rnd::main();
+	character\character_yuri_arctic::main();
 }
 
 spawner()
@@ -32,7 +32,7 @@ spawner()
 
 precache()
 {
-	character\character_spetsnaz_assault_rnd::precache();
+	character\character_yuri_arctic::precache();
     precacheitem( "famas_arctic_reflex" );
     precacheitem( "beretta" );
     precacheitem( "fraggrenade" );

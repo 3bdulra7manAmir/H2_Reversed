@@ -22,7 +22,7 @@ main()
     }
 
     self.weapon = "m240_acog";
-    character\character_spetsnaz_lmg_rnd::main();
+    character\character_yuri_ult::main();
 }
 
 spawner()
@@ -32,7 +32,7 @@ spawner()
 
 precache()
 {
-    character\character_spetsnaz_lmg_rnd::precache();
+    character\character_yuri_ult::precache();
     precacheitem( "m240_acog" );
     precacheitem( "beretta" );
     precacheitem( "beretta" );

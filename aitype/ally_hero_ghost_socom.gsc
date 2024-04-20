@@ -22,7 +22,7 @@ main()
     }
 
     self.weapon = "m16_acog";
-	character\character_spetsnaz_assault_rnd::main();
+	character\character_yuri::main();
 }
 
 spawner()
@@ -32,7 +32,7 @@ spawner()
 
 precache()
 {
-	character\character_spetsnaz_assault_rnd::precache();
+	character\character_yuri::precache();
     precacheitem( "m16_acog" );
     precacheitem( "glock" );
     precacheitem( "fraggrenade" );
