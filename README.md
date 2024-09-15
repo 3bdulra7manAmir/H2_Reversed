@@ -3,6 +3,6 @@
 
 # H2_Reversed
 
-- a Mod for MW2CR That does Major Changes for the game like You could play as the Russian, when there is a tank in a mission it will be a BTR,<br>your hands are Russian Hands, Makarov is Your SO and Zakhaev is Your General And Leader etc...
+- A mod for MW2CR That does Major Changes for the game like You could play as the Russian, when there is a tank in a mission it will be a BTR,<br>- Your hands are Russian Hands, Makarov is Your SO and Zakhaev is Your General And Leader etc...
 
 ![banned_usb_flashdrive](https://github.com/user-attachments/assets/f9b88039-ea9d-43bf-984f-c29c5588f7c9)
